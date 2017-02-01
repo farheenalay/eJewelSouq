@@ -1,45 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Welcome to e-JewelSouq</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- </head>
-<style>
- .navbar-default {
-    background-color: #bdab44;
-    border-color: #E7E7E7;
-}
-.navbar-brand {
- color: hover;
-}
-    </style>
+<title>Welcome to e-JewelSouq</title>
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><b><strong>e-JewelSouq</strong></b></a>
-    </div>
-    <ul class="nav navbar-nav">
-   <li class="active"><a href="#"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-home"></span>Home</button></a></li>
-      <li><a href=".jsp"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-menu-down"></span>Products</button></a></li>
-      <li><a href="reg"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-pencil"></span>Register</button></a></li>
-      <li><a href="login"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-log-in"></span>Log in</button></a></li>
-      <li><a href="abtus"><button type="submit" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-info-sign"></span>About Us</button></a></li>
-      <li><a href="contact"><button type="button" class="btn btn-default btn-sm">
-      <span class="glyphicon glyphicon-envelope"></span>Contact Us</button></a></li>  
-    </ul>
-  </div>
-</nav>
+  <jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
 <div class="container">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
@@ -53,15 +18,15 @@
 <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
     <div class="item active">
-       <div class="carousel-caption">
-          <img src="C:\Users\Anam\Pictures\1024x400\Bangles.jpg" alt="Bangles" width="100%" height="100%">
+       <img src="resources/Bangles.jpg" alt="Bangles" width="100%" height="100%">
+          <div class="carousel-caption">
           <h3>Gold Bangles</h3>
           <p>Beautiful 22k Gold Bangles</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="chain.jpg" alt="Chain" width="100%" height="100%">
+        <img src="resources/chain.jpg" alt="Chain" width="100%" height="100%">
         <div class="carousel-caption">
           <h3>Chain</h3>
           <p>Gold Chains</p>
@@ -69,7 +34,7 @@
       </div>
     
       <div class="item">
-        <img src="earrings.jpg" alt="Earrings" width="100%" height="100%">
+        <img src="resources/earrings.jpg" alt="Earrings" width="100%" height="100%">
         <div class="carousel-caption">
           <h3>Gold Earrings</h3>
           <p>Beautiful 22k Gold Earrings</p>
@@ -77,10 +42,10 @@
       </div>
 
       <div class="item">
-        <img src="1.jpg" alt="Diamond Ring" width="100%" height="100%">
+        <img src="resources/jewellery.jpg" alt="Necklace" width="100%" height="100%">
         <div class="carousel-caption">
-          <h3>Diamond Ring</h3>
-          <p>Beautiful Solitaire Diamond Ring
+          <h3>Necklace</h3>
+          <p>Gold 22k Necklace
           </p>
         </div>
       </div>
@@ -94,7 +59,10 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+    </div>
+</div>
+<div>
+<jsp:include page="/WEB-INF/views/footer.jsp"></jsp:include>
 </div>
 </body>
 </html>

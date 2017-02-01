@@ -12,21 +12,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <style>
- .navbar-default {
-     background-color: #bdab44;
-    border-color: #E7E7E7;
-}
+ .navbar-custom {
+  background-color: #c4b94a;
+  border-color: #b3a83a;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#d1c870), to(#c4b94a));}
 .navbar-brand {
- color: focus;
+  padding: 15px;
+}
+.navbar-brand>img {
+  height: 100px;
+  padding: 100px;
+  width: auto;
 }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<img src="/resources/Logo_opt.jpg" height="42" width="42">
+<nav class="navbar navbar-custom">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><b><strong>e-JewelSouq</strong></b></a>
-    </div>
+      <a class="navbar-brand" href="#">
+   </div>
     <ul class="nav navbar-nav">
    <li class="active"><a href="#"><button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-home"></span>Home</button></a></li>

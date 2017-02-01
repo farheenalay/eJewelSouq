@@ -3,31 +3,32 @@
 <head>
 <title>About Us</title>
 <style type="text/css">
-h2
+body {background-image: url("resources/Gold-Glitter.jpg");}
+h1
 {color:SaddleBrown;
 font-size:35px;
 font-family:Trebuchet MS;
 }
-h4
+h2
 {color:IndianRed;
 font-size:25px;
 font-family:Aclonica;
 }
 p
-{color:IndianRed;
-font-size:16px;
+{color:Black;
+font-size:20px;
 font-family:Amita;
 }
 </style>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<img class="img-responsive" src="jewellery.jpg" alt="jewellery">
+
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>About Us</h2><br>
-      <h4>Our Mission</h4><br>
+      <h1><b><strong>About Us</strong></b></h1><br>
+      <h2><b>Our Mission</b></h2><br>
       <p>Online jewellery destination that showcases high quality fine jewellery with strikingly exquisite designs.<br/><br/> 
       We aim at revolutionizing real jewellery and lifestyle scenario with a firm focus on craftsmanship, quality and user experience. 
       All designs are crafted to perfection with utmost care giving you the flexibility to customize the product's gold purity and colour or diamond 
