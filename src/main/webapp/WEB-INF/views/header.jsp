@@ -27,27 +27,29 @@
     </style>
 </head>
 <body>
-<img src="/resources/Logo_opt.jpg" height="42" width="42">
 <nav class="navbar navbar-custom">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
+    
+      <class="navbar-brand brand-name">
+       <a href="index"><img class="img-responsive2"       
+       src="resources/mylogo.png" height=100px width=130px></a>
    </div>
-    <ul class="nav navbar-nav">
-   <li class="active"><a href="#"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-home"></span>Home</button></a></li>
-      <li><a href=".jsp"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-menu-down"></span>Products</button></a></li>
-      <li><a href="reg"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-pencil"></span>Register</button></a></li>
-      <li><a href="login"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-log-in"></span>Log in</button></a></li>
-      <li><a href="abtus"><button type="submit" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-info-sign"></span>About Us</button></a></li>
-      <li><a href="contact"><button type="button" class="btn btn-default btn-sm">
-      <span class="glyphicon glyphicon-envelope"></span>Contact Us</button></a></li>  
+    <ul class="nav navbar-nav navbar-center">
+   <li class="active"><a href="index"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+      <li><a href=".jsp"><span class="glyphicon glyphicon-menu-down"></span>Products</a></li>
+      <li><a href="reg"><span class="glyphicon glyphicon-pencil"></span>Register</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Log in</a></li>
+      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span>About Us</a></li>
+      <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span>Contact Us</a></li>  
     </ul>
   </div>
+  <form class="navbar-form navbar-right" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-default">Search</button>
+</form>
 </nav>
 
 </body>

@@ -27,6 +27,7 @@ body {
 </style>
 </head>
 <body>
+<form action="reg">
 <jsp:include page="header.jsp"></jsp:include>
 <div class="container">
             <form class="form-horizontal" role="form" >
@@ -43,6 +44,12 @@ body {
                         <input type="email" id="email" placeholder="Email" class="form-control">
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="mobno" class="col-sm-3 control-label">Mobile No</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="mobno" placeholder="MobileNo" class="form-control">
+                    </div>
+                    </div>
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-9">
@@ -76,12 +83,12 @@ body {
                         <div class="row">
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="femaleRadio" value="Female">Female
+                                    <input type="radio" id="gender" value="Female">Female
                                 </label>
                             </div>
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="maleRadio" value="Male">Male
+                                    <input type="radio" id="gender" value="Male">Male
                                 </label>
                             </div>
                              </div>
@@ -105,5 +112,6 @@ body {
             </form> 
         </div> 
         <jsp:include page="footer.jsp"></jsp:include>
+</form>
 </body>
 </html>
