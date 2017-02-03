@@ -27,39 +27,39 @@ body {
 </style>
 </head>
 <body>
-<form action="reg">
 <jsp:include page="header.jsp"></jsp:include>
+<form action="register">
 <div class="container">
             <form class="form-horizontal" role="form" >
                 <h2>Registration Form</h2>
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">Full Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
+                        <input type="text" name="username" placeholder="Full Name" class="form-control" autofocus>
                         </div>
                 </div>
                 <div class="form-group">
                     <label for="email" class="col-sm-3 control-label">Email</label>
                     <div class="col-sm-9">
-                        <input type="email" id="email" placeholder="Email" class="form-control">
+                        <input type="email" name="email" placeholder="Email" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="mobno" class="col-sm-3 control-label">Mobile No</label>
                     <div class="col-sm-9">
-                        <input type="text" id="mobno" placeholder="MobileNo" class="form-control">
+                        <input type="text" name="mobno" placeholder="MobileNo" class="form-control">
                     </div>
                     </div>
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-9">
-                        <input type="password" id="password" placeholder="Password" class="form-control">
+                        <input type="password" name="password" placeholder="Password" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
                     <div class="col-sm-9">
-                        <input type="date" id="birthDate" class="form-control">
+                        <input type="date" name="dateofbirth" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
@@ -83,12 +83,12 @@ body {
                         <div class="row">
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="gender" value="Female">Female
+                                    <input type="radio" name="gender" value="Female">Female
                                 </label>
                             </div>
                             <div class="col-sm-4">
                                 <label class="radio-inline">
-                                    <input type="radio" id="gender" value="Male">Male
+                                    <input type="radio" name="gender" value="Male">Male
                                 </label>
                             </div>
                              </div>
@@ -106,7 +106,7 @@ body {
                 </div> 
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3" >
-                        <button type="submit" class="btn btn-info btn-lg">Register</button>
+                        <button type="submit" class="btn btn-info btn-lg">Register<a href="rsuccess.jsp"></a></button>
                     </div>
                 </div>
             </form> 

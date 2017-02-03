@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController 
 {
-	@RequestMapping ("/reg")
+	@RequestMapping ("/Regstr")
 	public String regt()
 	{
-		return "reg";
+		return "Regstr";
 	}
 	
 	@RequestMapping ("/login") 
