@@ -16,11 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 public class register extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
-		String un,pwd,mno;
+		String un,pwd,em,mno;
 		
 		un=req.getParameter("name");
 		pwd=req.getParameter("pass");
+		em=req.getParameter("email");
 		mno=req.getParameter("mno");
+		
+		
 		try{
 				Class.forName("org.h2.Driver");
 				System.out.println("Driver ok");
@@ -46,7 +49,7 @@ public class register extends HttpServlet {
 				Statement st=connect.createStatement();
 				System.out.println("Statement ok");
 				
-				st.executeUpdate("insert into Register values ('"+un+"','"+pwd+"','"+mno+"')");
+				st.executeUpdate("insert into Register values ('"+un+"','"+pwd+"','"+em+"','"+mno+"')");
 				
 			    System.out.println("Query ok");	
 			    

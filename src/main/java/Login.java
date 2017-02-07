@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Login extends HttpServlet {
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String uname=request.getParameter("name");
+		String email=request.getParameter("email");
 		String pwd=request.getParameter("pass");
 	try
 	{
@@ -31,7 +31,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		Statement st=conn.createStatement();
 		System.out.println("Statement Ok");
 		
-		ResultSet rs=st.executeQuery("select * from Register where name='"+uname+"'and password='"+pwd+"'") ;
+		ResultSet rs=st.executeQuery("select * from Register where email='"+email+"'and password='"+pwd+"'") ;
 		System.out.println("Query executed succesfully");
 	
 		PrintWriter pw=response.getWriter();
@@ -44,22 +44,20 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		pw.println("Welcome to eJewelSouq " +name);
 		
 		String pass=rs.getString(2);
-		String mob=rs.getString(3);
+		String mail=rs.getString(3);
+		String mob=rs.getString(4);
 		
-		
-
-	}
-	else
-	{
+		}
+	    else
+	    {
 		pw.print("Login Failed");
-	}
-     conn.close();
-     }
-	catch(Exception e)
-	{
+	    }
+     
+		conn.close();
+        }
+	     catch(Exception e)
+	      {
 		System.out.println("problem with database connection");
-	}
-		
-	}
-
-	}
+	      }
+		}
+}

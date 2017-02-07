@@ -36,20 +36,27 @@
        src="resources/mylogo.png" height=100px width=130px></a>
    </div>
     <ul class="nav navbar-nav navbar-center">
-   <li class="active"><a href="index"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-      <li><a href=".jsp"><span class="glyphicon glyphicon-menu-down"></span>Products</a></li>
-      <li><a href="Regstr"><span class="glyphicon glyphicon-pencil"></span>Register</a></li>
-      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Log in</a></li>
-      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span>About Us</a></li>
-      <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span>Contact Us</a></li>  
+   <li class="active"><a href="index"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li><a href=".jsp"><span class="glyphicon glyphicon-menu-down"></span> Products</a></li>
+      <li><a href="Regstr"><span class="glyphicon glyphicon-pencil"></span> Register</a></li>
+      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
+      <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>  
     </ul>
-  </div>
-  <form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
-  <button type="submit" class="btn btn-default">Search</button>
-</form>
+    
+    <div class="col-sm-3 col-md-3">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="q">
+        <div class="input-group-btn">
+        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+        </div>
+        </form>
+   </div>
+   
+   <ul class="nav navbar-nav navbar-right">
+   <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li></ul>
+</div>
 </nav>
 
 </body>
