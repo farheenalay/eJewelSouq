@@ -15,7 +15,7 @@
  .navbar-custom {
   background-color: #c4b94a;
   border-color: #b3a83a;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#d1c870), to(#c4b94a));}
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#d1c870, to(#c4b94a));}
 .navbar-brand {
   padding: 15px;
 }
@@ -33,7 +33,7 @@
     
       <class="navbar-brand brand-name">
        <a href="index"><img class="img-responsive2"       
-       src="resources/mylogo.png" height=100px width=130px></a>
+       src="resources/logo.png" height=100px width=130px></a>
    </div>
     <ul class="nav navbar-nav navbar-center">
    <li class="active"><a href="index"><span class="glyphicon glyphicon-home"></span> Home</a></li>
