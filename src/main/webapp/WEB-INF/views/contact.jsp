@@ -5,9 +5,14 @@
 <title>Contact Us</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet'>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+body {background-image: url("resources/desklo.jpg"); max-width: 100%; max-height: 100%;}
+
+</style>
+</head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="jumbotron jumbotron-sm">
@@ -66,7 +71,7 @@
             <form>
             <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
-                <strong>e-JewelSouq Pvt Ltd.</strong><br>
+                <strong><b>e-JewelSouq Pvt Ltd.</b></strong><br>
                  BasheerBagh<br>
                  Hyderabad 500029<br>
                 <abbr title="Phone">
@@ -83,3 +88,4 @@
 </div>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
+</html>
