@@ -3,7 +3,7 @@
 <head>
 <title>About Us</title>
 <style type="text/css">
-body {background-image: url("resources/Gold-Glitter.jpg");}
+body {background-image: url("resources/002.jpg"); max-width: 100%; max-height: 100%;}
 h1
 {color:SaddleBrown;
 font-size:35px;

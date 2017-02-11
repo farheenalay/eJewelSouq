@@ -9,7 +9,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet'>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/css">
-body {background-image: url("resources/desklo.jpg"); max-width: 100%; max-height: 100%;}
+body {background-image: url("resources/hola.jpg"); max-width: 100%; max-height: 100%;}
 
 </style>
 </head>
