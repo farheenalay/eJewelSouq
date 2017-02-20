@@ -9,6 +9,7 @@
 <title>Registration</title>
 </head>
 <body>
+<jsp:include page="adheader.jsp"></jsp:include>
     <div align="center">
         <form:form action="" method="post" commandName="userForm">
             <table border="0">
@@ -33,5 +34,6 @@
             </table>
         </form:form>
     </div>
+    <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

@@ -11,40 +11,26 @@
  <div align="center">
         <table border="0">
             <tr>
-                <td colspan="2" align="center"><h2>Product Added!</h2></td>
+                <td colspan="2" align="center"><h2>Category Added Successfully!</h2></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <h3> Details of your Product: </h3>
+                    <h3> Details of Category: </h3>
                 </td>
             </tr>
             <tr>
-                <td>Product ID:</td>
-                <td>${addProd.id}</td>
+                <td>Category ID:</td>
+                <td>${addCat.cid}</td>
             </tr>
             <tr>
                 <td>Product Name:</td>
-                <td>${addProd.name}</td>
+                <td>${addCat.cname}</td>
             </tr>
              <tr>
                 <td>Description:</td>
-                <td>${addProd.description}</td>
+                <td>${addCat.catdes}</td>
             </tr>
-             <tr>
-                <td>Quantity:</td>
-                <td>${addProd.quantity}</td>
-            </tr>
-             <tr>
-                <td>Product Price:</td>
-                <td>${addProd.price}</td>
-            </tr>
-             <tr>
-                <td>Manufacturing Date:</td>
-                <td>${addProd.mfg}</td>
-            </tr>
-           
- 
-        </table>
+      </table>
     </div>
     <jsp:include page="footer.jsp"></jsp:include>
 </body>

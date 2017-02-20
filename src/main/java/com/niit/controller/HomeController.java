@@ -35,4 +35,15 @@ public class HomeController
 	{
 		return "AddProd";
 	}
-}
+	
+	@RequestMapping ("/Adpage")
+	public String adpage()
+	{
+		return "Adpage";
+	}
+	
+	
+	
+	}
+	
+

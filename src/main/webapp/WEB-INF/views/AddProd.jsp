@@ -1,50 +1,50 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>   
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add New Product</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> Add Product </title>
 </head>
 <body>
-
-<div align="center">
+<jsp:include page="adheader.jsp"></jsp:include>
+    <center><h2> Add Product </h2></center>
         <form:form action="" method="post" commandName="addProd">
-            <table border="0">
-                <tr>
-                    <td colspan="3" align="center"><h2>Product Registration</h2></td>
-                </tr>
-                <tr>
-                    <td>Product ID :</td>
-                    <td><form:input path= "pid" /></td>
-                </tr>
-                <tr>
-                    <td>Product Name :</td>
-                    <td><form:input path= "pname" /></td>
-                </tr>
-                <tr>
-                    <td>Description :</td>
-                    <td><form:input path= "des" /></td>
-                </tr>
-                <tr>
-                    <td>Quantity :</td>
-                    <td><form:input path= "qty" /></td>
-                </tr>
-                <tr>
-                    <td>Price :</td>
-                    <td><form:input path= "pprice" /></td>
-                </tr>
-                <tr>
-                    <td>Manufacturing Date :</td>
-                    <td><form:input path= "mfgdate" /></td>
-                </tr>
-                
-                <tr>
-                    <td colspan="2" align="center"><input type="submit" value="Add Product" /></td>
-                </tr>
-            </table>
-        </form:form>
+            
+        <form>
+<div class="form-group">
+      <label for="Product ID">Product ID:</label>
+      <input type="text" class="form-control" name="id" placeholder="Product ID">
     </div>
-
+    <div class="form-group">
+      <label for="Product Name">Product Name:</label>
+      <input type="text" class="form-control" name="name" placeholder="Product Name">
+    </div>
+    <div class="form-group">
+      <label for="Product Name">Description:</label>
+      <input type="text" class="form-control" name="description" placeholder="Product Description">
+    </div>
+    <div class="form-group">
+      <label for="Product Quantity">Quantity:</label>
+      <input type="text" class="form-control" name="quantity" placeholder="Product Quantity">
+    </div>
+    <div class="form-group">
+      <label for="Product Price">Price:</label>
+      <input type="text" class="form-control" name="price" placeholder="Product Price">
+    </div>
+    <div class="form-group">
+      <label for="Manufacturing Date">Manufacturing Date:</label>
+      <input type="text" class="form-control" name="mfg" placeholder="Manufacturing Date">
+    </div>
+    <center><button type="submit" class="btn btn-success">  Add Product  </button></center>
+  </form>
+</div>
+</form:form>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
+            
+            
+                   

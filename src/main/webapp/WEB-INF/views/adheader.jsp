@@ -36,12 +36,14 @@
        src="resources/logo.png" height=100px width=130px></a>
    </div>
     <ul class="nav navbar-nav navbar-center">
-   <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      <li><a href="AddProd"> Products </a></li>
+   <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home </a></li>
       <li><a href="Regi"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
       <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
       <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
       <li><a href="Adpage"> Admin </a></li>
+      <li><a href="AddProd"> Products </a></li>
+      <li><a href="Supplier"> Supplier </a></li>
+      <li><a href="Category"> Category </a></li>
         
     </ul>
     
@@ -57,7 +59,7 @@
    </div>
    
    <ul class="nav navbar-nav navbar-right">
-   <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li></ul>
+   <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in </a></li></ul>
 </div>
 </nav>
 

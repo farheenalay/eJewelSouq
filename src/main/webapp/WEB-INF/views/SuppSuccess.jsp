@@ -6,31 +6,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Registration Success</title>
+<title>Supplier Registration Success</title>
 </head>
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>
     <div align="center">
         <table border="0">
             <tr>
-                <td colspan="2" align="center"><h2>Registration Succeeded!</h2></td>
+                <td colspan="2" align="center"><h2>Supplier Registration Succeeded!</h2></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <h3>Thank you for registering! Here's the review of your details:</h3>
+                    <h3> Here are the review of your details:</h3>
                 </td>
             </tr>
             <tr>
-                <td>User Name:</td>
-                <td>${userForm.username}</td>
+                <td>Supplier Name:</td>
+                <td>${addSupp.sname}</td>
             </tr>
             <tr>
-                <td>E-mail:</td>
-                <td>${userForm.email}</td>
+                <td>Description:</td>
+                <td>${addSupp.sdescription}</td>
             </tr>
-           
- 
-        </table>
+      </table>
     </div>
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
