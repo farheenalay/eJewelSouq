@@ -9,7 +9,7 @@ public class HomeController
 	@RequestMapping ("/Regstr")
 	public String regt()
 	{
-		return "Regstr";
+		return "Regi";
 	}
 	
 	@RequestMapping ("/login") 
@@ -28,5 +28,11 @@ public class HomeController
 	public String con()
 	{
 		return "contact";
+	}
+	
+	@RequestMapping ("/AddProd")
+	public String addp()
+	{
+		return "AddProd";
 	}
 }
