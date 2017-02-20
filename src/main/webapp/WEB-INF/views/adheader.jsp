@@ -57,8 +57,7 @@
         </div>
         </form>
    </div>
-   
-   <ul class="nav navbar-nav navbar-right">
+  <ul class="nav navbar-nav navbar-right">
    <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in </a></li></ul>
 </div>
 </nav>
