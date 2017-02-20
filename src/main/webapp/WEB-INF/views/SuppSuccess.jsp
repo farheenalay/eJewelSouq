@@ -20,6 +20,10 @@
                     <h3> Here are the review of your details:</h3>
                 </td>
             </tr>
+             <tr>
+                <td>Supplier ID:</td>
+                <td>${addSupp.sid}</td>
+            </tr>
             <tr>
                 <td>Supplier Name:</td>
                 <td>${addSupp.sname}</td>

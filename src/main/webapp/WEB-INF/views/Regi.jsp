@@ -10,30 +10,25 @@
 </head>
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>
-    <div align="center">
+    <center><h2> Registration </h2></center>
         <form:form action="" method="post" commandName="userForm">
-            <table border="0">
-                <tr>
-                    <td colspan="2" align="center"><h2> Registration </h2></td>
-                </tr>
-                <tr>
-                    <td>User Name:</td>
-                    <td><form:input path="username" /></td>
-                </tr>
-                <tr>
-                    <td>Password:</td>
-                    <td><form:password path="password" /></td>
-                </tr>
-                <tr>
-                    <td>E-mail:</td>
-                    <td><form:input path="email" /></td>
-                </tr>
-                <tr>
-                <td colspan="2" align="center"><input type="submit" value="Register" /></td>
-                </tr>
-            </table>
-        </form:form>
+            <form>
+     <div class="form-group">
+      <label for="UserName"> User Name : </label>
+      <input type="text" class="form-control" name="username" placeholder="User Name">
     </div>
-    <jsp:include page="footer.jsp"></jsp:include>
+    <div class="form-group">
+      <label for="Password"> Password: </label>
+      <input type="password" class="form-control" name="password" placeholder="Create Password">
+    </div>
+    <div class="form-group">
+      <label for="Email-ID"> Email-ID: </label>
+      <input type="text" class="form-control" name="email" placeholder="Email-ID">
+    </div>
+  <center> <button type="submit" class="btn btn-success"> Register </button> </center>
+  </form>
+  </form:form>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
+    

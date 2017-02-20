@@ -40,7 +40,6 @@
     </div>
     <center><button type="submit" class="btn btn-success">  Add Product  </button></center>
   </form>
-</div>
 </form:form>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>

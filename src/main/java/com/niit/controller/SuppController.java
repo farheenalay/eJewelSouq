@@ -24,6 +24,7 @@ public class SuppController {
 	public String processSupplier (@ModelAttribute("addSupp") Supplier supp,
 			Map <String,Object> model){
 		
+		System.out.println("Supplier ID :" + supp.getSid());
 		System.out.println("Supplier Name :" + supp.getSname());
 		System.out.println("Description :" + supp.getSdescription());
 		

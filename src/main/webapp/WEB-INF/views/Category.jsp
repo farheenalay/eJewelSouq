@@ -26,9 +26,8 @@
       <input type="text" class="form-control" name="catdes" placeholder="Description">
     </div>
     
-    <button type="submit" class="btn btn-success">Add Category</button>
+   <center> <button type="submit" class="btn btn-success">Add Category</button> </center>
   </form>
-</div>
 </form:form>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
