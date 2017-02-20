@@ -7,6 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add Category</title>
+<style type="text/css"> 
+body {background-image: url("resources/38.jpg");} 
+ </style>
 </head>
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>

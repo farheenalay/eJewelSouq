@@ -10,7 +10,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
 <style>
  .navbar-custom {
   background-color: #c4b94a;
@@ -35,15 +34,14 @@
        <a href="index.jsp"><img class="img-responsive2"       
        src="resources/logo.png" height=100px width=130px></a>
    </div>
-    <ul class="nav navbar-nav navbar-center">
+   <ul class="nav navbar-nav navbar-center">
    <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      <li><a href="AddProd"> Products </a></li>
       <li><a href="Regi"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
       <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
       <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
-      <li><a href="Adpage"> Admin </a></li>
-        
-    </ul>
+      <li><a href="AddProd"> Products </a></li>
+      <li><a href="Adpage"><span class="glyphicon glyphicon-user"></span> Admin </a></li>
+   </ul>
     
     <div class="col-sm-3 col-md-3">
         <form class="navbar-form" role="search">
@@ -57,7 +55,7 @@
    </div>
    
    <ul class="nav navbar-nav navbar-right">
-   <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li></ul>
+   <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in  </a></li></ul>
 </div>
 </nav>
 
