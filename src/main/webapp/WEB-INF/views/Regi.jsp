@@ -7,9 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Registration</title>
+<style type="text/css"> 
+body {background-image: url("resources/bki.jpg");} 
+ </style>
 </head>
 <body>
-<jsp:include page="adheader.jsp"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
     <center><h2> Registration </h2></center>
         <form:form action="" method="post" commandName="userForm">
             <form>
