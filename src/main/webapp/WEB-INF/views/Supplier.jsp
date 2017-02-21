@@ -16,19 +16,28 @@ body {background-image: url("resources/Te.jpg");}
 <center><h2>Add Supplier</h2></center>
         <form:form action="" method="post" commandName="addSupp">
            <form>
+           <div align="center">
      <div class="form-group">
-      <label for="Supplier ID">Supplier ID:</label>
+      <label class="col-md-4 control-label" for="Supplier ID">Supplier ID:</label>
+      <div class="col-md-4">
       <input type="text" class="form-control" name="sid" placeholder="Supplier ID" />
-    </div> 
+      </div> <br/> <br/> <br/>
+    </div>
     <div class="form-group">
-      <label for="Supplier Name">Supplier Name:</label>
+      <label class="col-md-4 control-label" for="Supplier Name">Supplier Name:</label>
+       <div class="col-md-4">
       <input type="text" class="form-control" name="sname" placeholder="Supplier Name" />
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Supplier Description">Description:</label>
-      <input type="text" class="form-control" name="sdescription" placeholder="Description" />
+      <label class="col-md-4 control-label" for="Supplier Description">Description:</label>
+      <div class="col-md-4">
+      <textarea class="form-control" rows="5" id="comment" name="sdescription" placeholder="Description" /> </textarea>
+    </div><br/> <br/> <br/>
     </div>
-    <center><button type="submit" class="btn btn-success">Add Supplier</button></center>
+    <br/> <br/> <br/>
+    <button type="submit" class="btn btn-success">Add Supplier</button>
+  </div>
   </form>
   </form:form>
 <jsp:include page="footer.jsp"></jsp:include>

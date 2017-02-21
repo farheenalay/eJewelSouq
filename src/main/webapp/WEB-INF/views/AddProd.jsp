@@ -15,33 +15,47 @@ body {background-image: url("resources/7.jpg");}
 <jsp:include page="adheader.jsp"></jsp:include>
     <center><h2> Add Product </h2></center>
         <form:form action="" method="post" commandName="addProd">
-            
-        <form>
-<div class="form-group">
-      <label for="Product ID">Product ID:</label>
+     <form>
+     <div align="center">
+     <div class="form-group">
+      <label class="col-md-4 control-label" for="Product ID">Product ID:</label>
+       <div class="col-md-4">
       <input type="text" class="form-control" name="id" placeholder="Product ID">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Product Name">Product Name:</label>
+      <label class="col-md-4 control-label" for="Product Name">Product Name:</label>
+       <div class="col-md-4">
       <input type="text" class="form-control" name="name" placeholder="Product Name">
+      </div> <br/> <br/> <br/>
     </div>
+    
     <div class="form-group">
-      <label for="Product Name">Description:</label>
-      <input type="text" class="form-control" name="description" placeholder="Product Description">
-    </div>
-    <div class="form-group">
-      <label for="Product Quantity">Quantity:</label>
+      <label class="col-md-4 control-label" for="Product Quantity">Quantity:</label>
+       <div class="col-md-4">
       <input type="text" class="form-control" name="quantity" placeholder="Product Quantity">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Product Price">Price:</label>
+      <label class="col-md-4 control-label" for="Product Price">Price:</label>
+       <div class="col-md-4">
       <input type="text" class="form-control" name="price" placeholder="Product Price">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Manufacturing Date">Manufacturing Date:</label>
+      <label class="col-md-4 control-label" for="Manufacturing Date">Manufacturing Date:</label>
+       <div class="col-md-4">
       <input type="text" class="form-control" name="mfg" placeholder="Manufacturing Date">
+      </div> <br/> <br/> <br/>
     </div>
-    <center><button type="submit" class="btn btn-success">  Add Product  </button></center>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Product Name">Description:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="description" placeholder="Product Description">
+      </div> <br/> <br/> <br/>
+    </div>
+   <button type="submit" class="btn btn-success">  Add Product  </button>
+  </div>
   </form>
 </form:form>
 <jsp:include page="footer.jsp"></jsp:include>

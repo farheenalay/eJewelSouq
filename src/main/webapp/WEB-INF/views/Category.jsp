@@ -16,20 +16,28 @@ body {background-image: url("resources/38.jpg");}
     <center><h2> Add New Category </h2></center>
         <form:form action="" method="post" commandName="addCat">
            <form>
-<div class="form-group">
-      <label for="Category ID">Category ID:</label>
+           <div align="center">
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Category ID">Category ID:</label>
+      <div class="col-md-4">
       <input type="text" class="form-control" name="cid" placeholder="Category ID">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Category Name">Category Name:</label>
+      <label class="col-md-4 control-label" for="Category Name">Category Name:</label>
+      <div class="col-md-4">
       <input type="text" class="form-control" name="cname" placeholder="Category Name">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Description">Description:</label>
+      <label class="col-md-4 control-label" for="Description">Description:</label>
+      <div class="col-md-4">
       <input type="text" class="form-control" name="catdes" placeholder="Description">
+      </div> <br/> <br/> <br/>
     </div>
     
-   <center> <button type="submit" class="btn btn-success">Add Category</button> </center>
+   <button type="submit" class="btn btn-success">Add Category</button>
+  </div>
   </form>
 </form:form>
 <jsp:include page="footer.jsp"></jsp:include>

@@ -16,19 +16,27 @@ body {background-image: url("resources/bki.jpg");}
     <center><h2> Registration </h2></center>
         <form:form action="" method="post" commandName="userForm">
             <form>
+     <div align="center">
      <div class="form-group">
-      <label for="UserName"> User Name : </label>
+     <label class="col-md-4 control-label" for="UserName"> User Name : </label>
+     <div class="col-md-4">
       <input type="text" class="form-control" name="username" placeholder="User Name">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Password"> Password: </label>
+      <label class="col-md-4 control-label" for="Password"> Password: </label>
+      <div class="col-md-4">
       <input type="password" class="form-control" name="password" placeholder="Create Password">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
-      <label for="Email-ID"> Email-ID: </label>
+      <label class="col-md-4 control-label" for="Email-ID"> Email-ID: </label>
+      <div class="col-md-4">
       <input type="text" class="form-control" name="email" placeholder="Email-ID">
+      </div> <br/> <br/> <br/>
     </div>
   <center> <button type="submit" class="btn btn-success"> Register </button> </center>
+  </div>
   </form>
   </form:form>
 <jsp:include page="footer.jsp"></jsp:include>
