@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add Category</title>
 <style type="text/css"> 
-body {background-image: url("resources/38.jpg");} 
+body {background-image: url("resources/sto.jpg"); width:100%;} 
  </style>
 </head>
 <body>

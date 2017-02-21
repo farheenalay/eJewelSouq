@@ -1,11 +1,16 @@
 package com.niit.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
-
+@Entity
 public class AddCategory {
 	
+	@Column
 	private int cid;
+	@Column
 	private String cname;
+	@Column
 	private String catdes;
 	public int getCid() {
 		return cid;
@@ -27,5 +32,5 @@ public class AddCategory {
 	}
 	
 	
-
+	
 }

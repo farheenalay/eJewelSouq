@@ -2,16 +2,21 @@ package com.niit.controller;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.niit.dao.ProdDao;
 import com.niit.model.Prod;
 
 @Controller
 @RequestMapping (value="/AddProd")
 public class ProdController {
+	
+	@Autowired
+	ProdDao prodDao;
 	
 	@RequestMapping (method=RequestMethod.GET)
 	public String viewAddProduct(Map <String , Object > model){
@@ -30,6 +35,8 @@ public class ProdController {
 		System.out.println("Quantity :" +prod.getQuantity());
 		System.out.println("Price :" + prod.getPrice());
 		System.out.println("Manufacturing Date :" +prod.getMfg());
+		
+		prodDao.saveProd(prod);
 		
 		return "AddPSuccess";
 	}

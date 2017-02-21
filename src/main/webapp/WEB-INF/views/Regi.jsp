@@ -35,6 +35,24 @@ body {background-image: url("resources/bki.jpg");}
       <input type="text" class="form-control" name="email" placeholder="Email-ID">
       </div> <br/> <br/> <br/>
     </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Mob No"> Mobile No: </label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="mob" placeholder="Mobile Number">
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Billing Address"> Billing Address: </label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="billadd" placeholder="Billing Address">
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Shipping Address"> Shipping Address: </label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="shipadd" placeholder="Shipping Address">
+      </div> <br/> <br/> <br/>
+    </div>
   <center> <button type="submit" class="btn btn-success"> Register </button> </center>
   </div>
   </form>

@@ -1,10 +1,24 @@
 package com.niit.model;
 
-public class Supplier {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+
+
+@Entity
+public class Supplier {
+	@Id
+	@GeneratedValue
 	private int sid;
+	
+	
+	@Column
 	private String sname;
+	@Column
 	private String sdescription;
+	
 	
 	public int getSid() {
 		return sid;
@@ -26,4 +40,5 @@ public class Supplier {
 	}
 	
 	
+		
 }
