@@ -2,10 +2,16 @@ package com.niit.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class User {
 
+	@Id
+	@GeneratedValue
+	private int uid;
+	
 	@Column
 	private String username;
 	@Column
@@ -25,6 +31,12 @@ public class User {
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
 	}
 	public String getPassword() {
 		return password;

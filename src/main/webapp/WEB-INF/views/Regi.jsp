@@ -22,6 +22,11 @@ body {background-image: url("resources/bki.jpg");}
      <div class="col-md-4">
       <input type="text" class="form-control" name="username" placeholder="User Name">
       </div> <br/> <br/> <br/>
+      <div class="form-group">
+     <label class="col-md-4 control-label" for="UserID"> User ID : </label>
+     <div class="col-md-4">
+      <input type="text" class="form-control" name="uid" placeholder="User ID">
+      </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Password"> Password: </label>

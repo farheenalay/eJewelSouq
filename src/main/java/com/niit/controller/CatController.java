@@ -1,5 +1,6 @@
 package com.niit.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,15 @@ import com.niit.model.AddCategory;
 public class CatController {
 	
 	@Autowired
-	CategoryDao catdao;
+	CategoryDao catDao;
 	
 	@RequestMapping (method=RequestMethod.GET)
 	public String viewCategory(Map <String,Object> model) {
 		AddCategory addCat=new AddCategory();
 		model.put("addCat",addCat);
 		
+		List emp=catDao.listCat();
+		model.put("emplist",emp);
 		return "Category";
 	}
 
@@ -33,8 +36,13 @@ public class CatController {
 	   System.out.println("Name :" + add.getCname());
 	   System.out.println("Description :" + add.getCatdes());
 	   
-	   catdao.saveCategory(add);
+	   catDao.saveAddCategory(add);
 	   
-	   return "CatSuccess";
+	   
+		
+		List emp=catDao.listCat();
+		model.put("emplist",emp);
+	   
+	   return "Category";
 	}
 }

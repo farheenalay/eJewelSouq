@@ -25,8 +25,24 @@
                 <td>${userForm.username}</td>
             </tr>
             <tr>
+                <td>User ID:</td>
+                <td>${userForm.uid}</td>
+            </tr>
+            <tr>
                 <td>E-mail:</td>
                 <td>${userForm.email}</td>
+            </tr>
+            <tr>
+                <td>Mobile No:</td>
+                <td>${userForm.mob}</td>
+            </tr>
+            <tr>
+                <td>Billing Address:</td>
+                <td>${userForm.billadd}</td>
+            </tr>
+            <tr>
+                <td>Shipping Address:</td>
+                <td>${userForm.shipadd}</td>
             </tr>
            
  

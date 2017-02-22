@@ -1,5 +1,7 @@
 package com.niit.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,7 @@ public class CategoryDao {
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	public void saveCategory(AddCategory add)
+	public void saveAddCategory(AddCategory add)
 	{
 		Session session=sessionFactory.openSession();
 		System.out.println("insert method called");
@@ -23,5 +25,21 @@ public class CategoryDao {
 		session.close();
 		
 	}
+	
+	public List listCat()
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert method called");
+		session.beginTransaction();
+		List employees = session.createQuery("FROM AddCategory").list(); 
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		return employees;
+		
+	}
+	
+
 
 }

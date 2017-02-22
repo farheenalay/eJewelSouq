@@ -33,6 +33,7 @@ public class Regcontroller {
 	         
 	        
 	        System.out.println("Username: " + user.getUsername());
+	        System.out.println("User ID: " + user.getUid());
 	        System.out.println("Password: " + user.getPassword());
 	        System.out.println("Email: " + user.getEmail());
 	        System.out.println("Mobile No: " + user.getMob());
