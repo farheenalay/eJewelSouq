@@ -22,16 +22,17 @@ table {
 }
 
 th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
-tr{background-color: #f2f2f2}
+tr{background-color: #f2f2f2;
+   text-align:center;}
 
 th {
     background-color: #4CAF50;
     color: white;
-}
+   }
 </style>
 </head>
 <body>
@@ -60,17 +61,18 @@ th {
     </div>
     <br/> <br/> <br/>
     <button type="submit" class="btn btn-success">Add Supplier</button>
+    <br/> <br/> <br/> <br/>
   </div>
   </form>
   </form:form>
-  
-  <h3 class="text-center"> Supplier List </h3>
+  <br/> <br/> <br/> <br/> <br/> <br/>
+<h2 style="background-color:rgb(255, 255, 255)"><center><bold> Supplier List </bold></center></h2>
 <table class="table table-bordered">
   <thead>
    <tr>
-    <th>Supplier Id</th>
-    <th>Supplier Name</th>
-    <th>Supplier Description</th>
+    <th><center>Supplier Id</center></th>
+    <th><center>Supplier Name</center></th>
+    <th><center>Supplier Description</center></th>
     </tr>
   </thead>
   <c:forEach items="${suplist}" var="supl">

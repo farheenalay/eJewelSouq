@@ -22,7 +22,7 @@ table {
 }
 
 th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
@@ -58,18 +58,19 @@ th {
       <input type="text" class="form-control" name="catdes" placeholder="Description">
       </div> <br/> <br/> <br/>
     </div>
-    
+    <br/> <br/> <br/> <br/>
    <button type="submit" class="btn btn-success">Add Category</button>
   </div>
   </form>
 </form:form>
-<h3 class="text-center"> Category List </h3>
+<br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+<h2 style="background-color:rgb(255, 255, 255)"><center><bold> Category List </bold></center></h2>
 <table class="table table-bordered">
   <thead>
    <tr>
-    <th>Category Id</th>
-    <th>Category Name</th>
-    <th>Category Description</th>
+    <th><center>Category Id</center></th>
+    <th><center>Category Name</center></th>
+    <th><center>Category Description</center></th>
     </tr>
   </thead>
   <c:forEach items="${emplist}" var="empl">

@@ -22,7 +22,7 @@ table {
 }
 
 th, td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
@@ -81,17 +81,17 @@ th {
   </div>
   </form>
 </form:form>
-
-<h3 class="text-center"> Product List </h3>
+<br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+<h2 style="background-color:rgb(255, 255, 255)"><center><bold> Product List </bold></center></h2>
 <table class="table table-bordered">
   <thead>
    <tr>
-    <th>Product Id</th>
-    <th>Product Name</th>
-    <th>Quantity</th>
-    <th>Product Price</th>
-    <th>Manufacturing Date</th>
-    <th>Product Description</th>
+    <th><center>Product Id</center></th>
+    <th><center>Product Name</center></th>
+    <th><center>Quantity</center></th>
+    <th><center>Product Price</center></th>
+    <th><center>Manufacturing Date</center></th>
+    <th><center>Product Description</center></th>
     </tr>
   </thead>
   <c:forEach items="${pro}" var="prol">
@@ -102,13 +102,12 @@ th {
     <td><c:out value="${prol.price}"/></td>
     <td><c:out value="${prol.mfg}"/></td>
     <td><c:out value="${prol.description}"/></td>
+    <td><a href="edit">edit</a></td>
+    <td><a href="delete">delete</a></td>
+    
   </tr>
   </c:forEach>
 </table>
-
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
-            
-            
-                   

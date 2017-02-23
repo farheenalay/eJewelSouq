@@ -31,6 +31,7 @@ public class CategoryDao {
 		Session session=sessionFactory.openSession();
 		System.out.println("insert method called");
 		session.beginTransaction();
+		
 		List employees = session.createQuery("FROM AddCategory").list(); 
 		
 		session.getTransaction().commit();

@@ -13,13 +13,12 @@ import com.niit.dao.ProdDao;
 import com.niit.model.Prod;
 
 @Controller
-@RequestMapping (value="/AddProd")
 public class ProdController {
 	
 	@Autowired
 	ProdDao prodDao;
 	
-	@RequestMapping (method=RequestMethod.GET)
+	@RequestMapping (value="/AddProd",method=RequestMethod.GET)
 	public String viewAddProduct(Map <String , Object > model){
 		Prod addProd=new Prod();
 		model.put("addProd", addProd);
@@ -29,7 +28,7 @@ public class ProdController {
 		return "AddProd";
 	}
 	
-	@RequestMapping (method=RequestMethod.POST)
+	@RequestMapping (value="/AddProd",method=RequestMethod.POST)
 	public String processAddProduct (@ModelAttribute("addProd")Prod prod, Map <String,Object> model){
 		
 		System.out.println("Product ID :" + prod.getId());
@@ -46,5 +45,17 @@ public class ProdController {
 		return "AddProd";
 	}
 	
+	
+	@RequestMapping (value="/edit",method=RequestMethod.GET)
+	public String editProduct(Map <String , Object > model){
+		Prod addProd=new Prod();
+		model.put("addProd", addProd);
+		
+		List prolist=prodDao.listPro();
+		
+		
+		model.put("pro",prolist);
+		return "AddProd";
+	}
 
 }
