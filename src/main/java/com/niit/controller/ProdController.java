@@ -1,5 +1,6 @@
 package com.niit.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ public class ProdController {
 		Prod addProd=new Prod();
 		model.put("addProd", addProd);
 		
+		List prolist=prodDao.listPro();
+		model.put("pro",prolist);
 		return "AddProd";
 	}
 	
@@ -38,7 +41,9 @@ public class ProdController {
 		
 		prodDao.saveProd(prod);
 		
-		return "AddPSuccess";
+		List prolist=prodDao.listPro();
+		model.put("pro", prolist);
+		return "AddProd";
 	}
 	
 

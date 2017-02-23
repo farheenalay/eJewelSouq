@@ -15,15 +15,22 @@
 <style type="text/css"> 
 body {background-image: url("resources/sto.jpg"); width:100%;} 
  </style>
- 
  <style>
-table, th, td {
-    border: 1px solid black;
+table {
     border-collapse: collapse;
+    width: 100%;
 }
+
 th, td {
-    padding: 5px;
     text-align: left;
+    padding: 8px;
+}
+
+tr{background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
 }
 </style>
 </head>
@@ -56,16 +63,13 @@ th, td {
   </div>
   </form>
 </form:form>
-
-
-
-  <caption><strong><bold>Category List</bold></strong></caption>
-  <table class="table" style="width:100%">
-  <thead class="thead-inverse">
-  <tr>
-    <th>CategoryId</th>
-    <th>CategoryName</th>
-    <th>CategoryDescription</th>
+<h3 class="text-center"> Category List </h3>
+<table class="table table-bordered">
+  <thead>
+   <tr>
+    <th>Category Id</th>
+    <th>Category Name</th>
+    <th>Category Description</th>
     </tr>
   </thead>
   <c:forEach items="${emplist}" var="empl">

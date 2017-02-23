@@ -1,15 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>   
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> Add Product </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css"> 
 body {background-image: url("resources/7.jpg");} 
  </style>
+ <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr{background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
 </head>
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>
@@ -58,6 +81,31 @@ body {background-image: url("resources/7.jpg");}
   </div>
   </form>
 </form:form>
+
+<h3 class="text-center"> Product List </h3>
+<table class="table table-bordered">
+  <thead>
+   <tr>
+    <th>Product Id</th>
+    <th>Product Name</th>
+    <th>Quantity</th>
+    <th>Product Price</th>
+    <th>Manufacturing Date</th>
+    <th>Product Description</th>
+    </tr>
+  </thead>
+  <c:forEach items="${pro}" var="prol">
+  <tr>
+    <td><c:out value="${prol.id}"/></td>
+    <td><c:out value="${prol.name}"/></td>
+    <td><c:out value="${prol.quantity}"/></td>
+    <td><c:out value="${prol.price}"/></td>
+    <td><c:out value="${prol.mfg}"/></td>
+    <td><c:out value="${prol.description}"/></td>
+  </tr>
+  </c:forEach>
+</table>
+
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

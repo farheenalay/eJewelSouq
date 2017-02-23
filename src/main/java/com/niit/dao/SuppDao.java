@@ -1,5 +1,7 @@
 package com.niit.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +24,19 @@ public class SuppDao {
 		session.save(supp);
 		session.getTransaction().commit();
 			session.close();
-		
-		
 	}
 	
+	public List listSupp()
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert called method");
+		session.beginTransaction();
+		List suppliers=session.createQuery("FROM Supplier").list();
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		return suppliers;
+	}
 
 }

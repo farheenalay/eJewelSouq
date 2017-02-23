@@ -1,5 +1,6 @@
 package com.niit.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class SuppController {
 	Supplier addSupp=new Supplier();
 	model.put ("addSupp", addSupp);
 	
+	List sup=supDAO.listSupp();
+	model.put("suplist",sup);
 	return "Supplier";
 }
 	@RequestMapping (method=RequestMethod.POST)
@@ -36,7 +39,9 @@ public class SuppController {
 		
 		supDAO.storeSupplier(supp);
 		
-		return "SuppSuccess";
+		List sup=supDAO.listSupp();
+		model.put("suplist", sup);
+		return "Supplier";
 	}
 		
 }
