@@ -77,6 +77,14 @@ th {
       <input type="text" class="form-control" name="description" placeholder="Product Description">
       </div> <br/> <br/> <br/>
     </div>
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Product Image">Product Image</label>
+       <div class="col-md-4">
+      <input type="file" class="form-control" name="file" placeholder="Product Image">
+      </div> <br/> <br/> <br/>
+    </div>
+    
    <button type="submit" class="btn btn-success">  Add Product  </button>
   </div>
   </form>

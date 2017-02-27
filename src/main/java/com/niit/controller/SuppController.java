@@ -27,6 +27,7 @@ public class SuppController {
 	
 	List sup=supDAO.listSupp();
 	model.put("suplist",sup);
+	
 	return "Supplier";
 }
 	@RequestMapping (method=RequestMethod.POST)
@@ -41,6 +42,7 @@ public class SuppController {
 		
 		List sup=supDAO.listSupp();
 		model.put("suplist", sup);
+		
 		return "Supplier";
 	}
 		
