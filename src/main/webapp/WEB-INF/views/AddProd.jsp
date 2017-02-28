@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css"> 
-body {background-image: url("resources/7.jpg");} 
+body {background-image: url("");} 
  </style>
  <style>
 table {
@@ -37,7 +37,8 @@ th {
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>
     <center><h2> Add Product </h2></center>
-        <form:form action="" method="post" commandName="addProd">
+    <c:url value="/resources/.jpg" var="url"></c:url>
+        <form:form action="" method="post" commandName="addProd" enctype="multipart/form-data">
      <form>
      <div align="center">
      <div class="form-group">
@@ -81,7 +82,7 @@ th {
     <div class="form-group">
       <label class="col-md-4 control-label" for="Product Image">Product Image</label>
        <div class="col-md-4">
-      <input type="file" class="form-control" name="file" placeholder="Product Image">
+      <input type="file" class="form-control" name="image" placeholder="Product Image">
       </div> <br/> <br/> <br/>
     </div>
     
@@ -110,6 +111,8 @@ th {
     <td><c:out value="${prol.price}"/></td>
     <td><c:out value="${prol.mfg}"/></td>
     <td><c:out value="${prol.description}"/></td>
+    <td><c:url var="src" value="/resources/${prol.id}.jpg"></c:url>
+    <img src="${src }" width="50" height="50"/> </td>
     <td><a href="edit">edit</a></td>
     <td><a href="delete">delete</a></td>
     

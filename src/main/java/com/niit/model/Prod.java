@@ -6,6 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 public class Prod {
@@ -28,6 +31,10 @@ public class Prod {
 	
 	@Column
 	private Date mfg;
+	
+	@Transient
+	private MultipartFile image;
+	
 
 	public int getId() {
 		return id;
@@ -75,6 +82,14 @@ public class Prod {
 
 	public void setMfg(Date mfg) {
 		this.mfg = mfg;
+	}
+
+	public MultipartFile getImage() {
+		return image;
+	}
+
+	public void setImage(MultipartFile image) {
+		this.image = image;
 	}
 	
 	

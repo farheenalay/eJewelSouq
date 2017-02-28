@@ -1,6 +1,7 @@
 package com.niit.controller;
 
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -49,8 +51,28 @@ public class ProdController {
 		
 		List prolist=prodDao.listPro();
 		model.put("pro", prolist);
+	
+		try
+		{
+		String path="C:\\Users\\Anam\\Desktop\\DT\\eJewelSouq\\src\\main\\webapp\\resources\\";
+		path=path+String.valueOf(prod.getId()) + ".jpg";
+		File f=new File(path);
+		MultipartFile filedata=prod.getImage();
+		
+		byte[] b=filedata.getBytes();
+		FileOutputStream fos=new FileOutputStream(f);
+		BufferedOutputStream bos=new BufferedOutputStream(fos);
+		
+		bos.write(b);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		return "AddProd";
-	}
+		
+			
+		}
 	
 	
 	@RequestMapping (value="/edit",method=RequestMethod.GET)
@@ -66,24 +88,6 @@ public class ProdController {
 	}
 	
 	
-	@RequestMapping(value="/file",method=RequestMethod.POST)  
-	public ModelAndView upload(@RequestParam CommonsMultipartFile file,HttpSession session){  
-	        String path=session.getServletContext().getRealPath("/");  
-	        String filename=file.getOriginalFilename();  
-	          
-	        System.out.println(path+" "+filename);  
-	        try{  
-	        byte barr[]=file.getBytes();  
-	          
-	        BufferedOutputStream buff=new BufferedOutputStream(  
-	                 new FileOutputStream(path+"/"+filename));  
+	
 	        
-	        buff.write(barr);  
-	        buff.flush();  
-	        buff.close();  
-	          
-	        }catch(Exception e){System.out.println(e);}  
-	        return new ModelAndView("upload-success","filename",path+"/"+filename);  
-	    }  
-
 }
