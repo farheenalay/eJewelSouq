@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.niit.model.AddCategory;
 import com.niit.model.Prod;
 
 @Repository
@@ -39,4 +40,44 @@ public class ProdDao {
 		return products;
 	}
 	
+	public Prod getP(int proid)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert method called");
+		session.beginTransaction();
+		
+		Prod pro = (Prod)session.get(Prod.class,proid); 
+		
+		session.getTransaction().commit();
+		session.close();
+		return pro;
+	}
+	
+	
+	public void updateProd(Prod pr)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert method called");
+		session.beginTransaction();
+		
+		session.saveOrUpdate(pr); 
+		
+		session.getTransaction().commit();
+		session.close();
+	}
+	
+	public Prod deleteProd(int prid)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert method called");
+		session.beginTransaction();
+		
+		Prod p = (Prod)session.get(Prod.class,prid);
+		
+		session.delete(p);
+		session.getTransaction().commit();
+		session.close();
+		return p;
+				
+	}
 }

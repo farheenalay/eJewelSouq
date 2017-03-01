@@ -3,6 +3,7 @@ package com.niit.controller;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.dao.ProdDao;
+import com.niit.model.AddCategory;
 import com.niit.model.Prod;
 
 @Controller
@@ -34,6 +36,7 @@ public class ProdController {
 		
 		List prolist=prodDao.listPro();
 		model.put("pro",prolist);
+		model.put("ed", 0);
 		return "AddProd";
 	}
 	
@@ -51,7 +54,8 @@ public class ProdController {
 		
 		List prolist=prodDao.listPro();
 		model.put("pro", prolist);
-	
+		model.put("ed", 0);
+		
 		try
 		{
 		String path="C:\\Users\\Anam\\Desktop\\DT\\eJewelSouq\\src\\main\\webapp\\resources\\";
@@ -72,5 +76,57 @@ public class ProdController {
 		return "AddProd";
 		}	
 	
+	@RequestMapping(value="/editProduct",method=RequestMethod.GET)
+	public String editProduct(@RequestParam("proid")int pi,Map <String,Object> model)
+	{
+		
+		Prod product=prodDao.getP(pi);
+		System.out.println(product.getId());
+		
+        List <Prod> pl=new ArrayList<Prod>();
+        
+        pl.add(product);
+        
+		model.put("addProd",pl);
+		model.put("pData",product);
+		model.put("ed",1);
+		
+		
+		List prolist=prodDao.listPro();
+		model.put("pro", prolist);
+		
+		return "AddProd";
+	}
 	
+	@RequestMapping (value="/editP",method=RequestMethod.POST)
+	public String editPr(@ModelAttribute("addProd")Prod prod, Map <String,Object> model){
+		
+		System.out.println("Product ID :" + prod.getId());
+		System.out.println("Product Name :" + prod.getName());
+		System.out.println("Description :" + prod.getDescription());
+		System.out.println("Quantity :" +prod.getQuantity());
+		System.out.println("Price :" + prod.getPrice());
+		System.out.println("Manufacturing Date :" +prod.getMfg());
+		
+		prodDao.updateProd(prod);
+		model.put("ed", 0);
+		
+		List prolist=prodDao.listPro();
+		model.put("pro", prolist);
+	   
+	   return "AddProd";
+	}
+	
+	@RequestMapping(value="/delpro",method=RequestMethod.GET)
+	public String delProduct(@RequestParam("prid")int pd,Map <String,Object> model)
+	{
+	    model.put("ed", 0);
+	    prodDao.deleteProd(pd);
+	    
+	    List prolist=prodDao.listPro();
+		model.put("pro", prolist);
+	   
+	    return "AddProd";
+	    
+	}
 }

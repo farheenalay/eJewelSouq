@@ -38,51 +38,54 @@ th {
 <jsp:include page="adheader.jsp"></jsp:include>
     <center><h2> Add Product </h2></center>
     <c:url value="/resources/.jpg" var="url"></c:url>
-        <form:form action="" method="post" commandName="addProd" enctype="multipart/form-data">
+    <c:set var="prod" scope="session" value="${ed}"/>
+    <c:choose>
+    <c:when test="${ed==0}">
+        <form:form action="AddProd" method="post" commandName="addProd" enctype="multipart/form-data">
      <form>
      <div align="center">
      <div class="form-group">
       <label class="col-md-4 control-label" for="Product ID">Product ID:</label>
        <div class="col-md-4">
-      <input type="text" class="form-control" name="id" placeholder="Product ID">
+      <input type="text" class="form-control" name="id" value="${pData.id}">
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Product Name">Product Name:</label>
        <div class="col-md-4">
-      <input type="text" class="form-control" name="name" placeholder="Product Name">
+      <input type="text" class="form-control" name="name" value="${pData.name}">
       </div> <br/> <br/> <br/>
     </div>
     
     <div class="form-group">
       <label class="col-md-4 control-label" for="Product Quantity">Quantity:</label>
        <div class="col-md-4">
-      <input type="text" class="form-control" name="quantity" placeholder="Product Quantity">
+      <input type="text" class="form-control" name="quantity" value="${pData.quantity}">
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Product Price">Price:</label>
        <div class="col-md-4">
-      <input type="text" class="form-control" name="price" placeholder="Product Price">
+      <input type="text" class="form-control" name="price" value="${pData.price}">
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Manufacturing Date">Manufacturing Date:</label>
        <div class="col-md-4">
-      <input type="text" class="form-control" name="mfg" placeholder="Manufacturing Date">
+      <input type="text" class="form-control" name="mfg" value="${pData.mfg}">
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Product Name">Description:</label>
        <div class="col-md-4">
-      <input type="text" class="form-control" name="description" placeholder="Product Description">
+      <input type="text" class="form-control" name="description" value="${pData.description}">
       </div> <br/> <br/> <br/>
     </div>
     
     <div class="form-group">
       <label class="col-md-4 control-label" for="Product Image">Product Image</label>
        <div class="col-md-4">
-      <input type="file" class="form-control" name="image" placeholder="Product Image">
+      <input type="file" class="form-control" name="image" value="${pData.image}">
       </div> <br/> <br/> <br/>
     </div>
     
@@ -90,6 +93,65 @@ th {
   </div>
   </form>
 </form:form>
+</c:when>
+<c:otherwise>
+
+
+<form:form action="editP" method="post" commandName="addProd" enctype="multipart/form-data">
+     <form>
+     <div align="center">
+     <div class="form-group">
+      <label class="col-md-4 control-label" for="Product ID">Product ID:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="id" value="${pData.id}">
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Product Name">Product Name:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="name" value="${pData.name}">
+      </div> <br/> <br/> <br/>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Product Quantity">Quantity:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="quantity" value="${pData.quantity}">
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Product Price">Price:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="price" value="${pData.price}">
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Manufacturing Date">Manufacturing Date:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="mfg" value="${pData.mfg}">
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Product Name">Description:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="description" value="${pData.description}">
+      </div> <br/> <br/> <br/>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Product Image">Product Image</label>
+       <div class="col-md-4">
+      <input type="file" class="form-control" name="image" value="${pData.image}">
+      </div> <br/> <br/> <br/>
+    </div>
+    
+   <button type="submit" class="btn btn-success">  Edit Product  </button>
+  </div>
+  </form>
+</form:form>
+</c:otherwise>
+</c:choose>
+
 <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
 <h2 style="background-color:rgb(255, 255, 255)"><center><bold> Product List </bold></center></h2>
 <table class="table table-bordered">
@@ -114,7 +176,7 @@ th {
     <td><c:url var="src" value="/resources/${prol.id}.jpg"></c:url>
     <img src="${src }" width="50" height="50"/> </td>
     <td><a href="editProduct?proid=${prol.id}">edit</a></td>
-    <td><a href="delete">delete</a></td>
+    <td><a href="delpro?prid=${prol.id }">delete</a></td>
     
   </tr>
   </c:forEach>

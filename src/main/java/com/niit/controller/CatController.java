@@ -89,6 +89,7 @@ public class CatController {
 	@RequestMapping(value="/deletecat",method=RequestMethod.GET)
 	public String DeleteCat(@RequestParam("id")int i,Map <String,Object> model)
 	{
+		model.put("editing",0);
 		catDao.deleteCat(i);
 		List cat=catDao.listCat();
 		model.put("catlist",cat);

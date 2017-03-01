@@ -86,4 +86,16 @@ public class SuppController {
 		return "Supplier";
 		
 	}
+	
+	@RequestMapping (value="/delsup",method=RequestMethod.GET)
+	public String delSup(@RequestParam ("suid")int s, Map <String,Object> model)
+	{
+		model.put("spedit",0);
+		supDAO.delSupplier(s);
+		
+		List sup=supDAO.listSupp();
+		model.put("suplist", sup);
+		
+		return "Supplier";
+	}
 }

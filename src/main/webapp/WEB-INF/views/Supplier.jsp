@@ -116,7 +116,7 @@ th {
     <td><c:out value="${supl.sname}"/></td>
     <td><c:out value="${supl.sdescription}"/></td>
     <td><a href="EditS?supid=${supl.sid}">Edit</a></td>
-    <td><a href="delete">delete</a></td>
+    <td><a href="delsup?suid=${supl.sid }">Delete</a></td>
   </tr>
   </c:forEach>
 </table>

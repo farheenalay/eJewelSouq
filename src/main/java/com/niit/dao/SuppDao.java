@@ -72,4 +72,20 @@ public class SuppDao {
 		System.out.println(supplier.getSid());
 		System.out.println(supplier.getSdescription());
 		}
+
+	public Supplier delSupplier(int suid)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert method called");
+		session.beginTransaction();
+		
+		Supplier s=(Supplier)session.get(Supplier.class,suid);
+		
+		session.delete(s);
+		session.getTransaction().commit();
+		session.close();
+		
+		return s;
+				
+	}
 }
