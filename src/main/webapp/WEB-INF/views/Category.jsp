@@ -37,25 +37,28 @@ th {
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>
     <center><h2> Add New Category </h2></center>
-        <form:form action="" method="post" commandName="addCat">
+    <c:set var="pst" scope="session" value="${editing}"/>
+    <c:choose>
+    <c:when test="${pst==0}">
+        <form:form action="Category" method="post" commandName="addCat">
            <form>
            <div align="center">
     <div class="form-group">
       <label class="col-md-4 control-label" for="Category ID">Category ID:</label>
       <div class="col-md-4">
-      <input type="text" class="form-control" name="cid" placeholder="Category ID">
+      <input type="text" class="form-control" name="cid" value="${catData.cid}" >
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Category Name">Category Name:</label>
       <div class="col-md-4">
-      <input type="text" class="form-control" name="cname" placeholder="Category Name">
+      <input type="text" class="form-control" name="cname" value="${catData.cname}">
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Description">Description:</label>
       <div class="col-md-4">
-      <input type="text" class="form-control" name="catdes" placeholder="Description">
+      <input type="text" class="form-control" name="catdes" value="${catData.catdes}">
       </div> <br/> <br/> <br/>
     </div>
     <br/> <br/> <br/> <br/>
@@ -63,6 +66,37 @@ th {
   </div>
   </form>
 </form:form>
+</c:when>
+<c:otherwise>
+ <form:form action="editCategory" method="post" commandName="addCat">
+           <form>
+           <div align="center">
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Category ID">Category ID:</label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="cid" value="${catData.cid}" >
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Category Name">Category Name:</label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="cname" value="${catData.cname}">
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Description">Description:</label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="catdes" value="${catData.catdes}">
+      </div> <br/> <br/> <br/>
+    </div>
+    <br/> <br/> <br/> <br/>
+   <button type="submit" class="btn btn-success">Edit Category</button>
+  </div>
+  </form>
+</form:form>
+</c:otherwise>
+</c:choose>
+
 <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
 <h2 style="background-color:rgb(255, 255, 255)"><center><bold> Category List </bold></center></h2>
 <table class="table table-bordered">
@@ -73,11 +107,13 @@ th {
     <th><center>Category Description</center></th>
     </tr>
   </thead>
-  <c:forEach items="${emplist}" var="empl">
+  <c:forEach items="${catlist}" var="empl">
   <tr>
     <td><c:out value="${empl.cid}"/></td>
     <td><c:out value="${empl.cname}"/></td>
     <td><c:out value="${empl.catdes}"/></td>
+     <td><a href="edit?catid=${empl.cid}">edit</a></td>
+    <td><a href="deletecat?id=${empl.cid}">delete</a></td>
   </tr>
   </c:forEach>
 </table>

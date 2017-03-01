@@ -38,5 +38,38 @@ public class SuppDao {
 		
 		return suppliers;
 	}
+	
+	public Supplier getSup (int supid)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert called method");
+		session.beginTransaction();
+		
+		Supplier su=(Supplier)session.get(Supplier.class,supid);
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		System.out.println(su.getSname());
+		System.out.println(su.getSid());
+		System.out.println(su.getSdescription());
+		
+		return su;
+	}
 
+	public void updateSupplier(Supplier supplier)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert called method");
+		session.beginTransaction();
+		
+		session.saveOrUpdate(supplier);
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		System.out.println(supplier.getSname());
+		System.out.println(supplier.getSid());
+		System.out.println(supplier.getSdescription());
+		}
 }

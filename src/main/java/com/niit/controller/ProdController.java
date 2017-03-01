@@ -70,24 +70,7 @@ public class ProdController {
 			e.printStackTrace();
 		}
 		return "AddProd";
-		
-			
-		}
+		}	
 	
 	
-	@RequestMapping (value="/edit",method=RequestMethod.GET)
-	public String editProduct(Map <String , Object > model){
-		Prod addProd=new Prod();
-		model.put("addProd", addProd);
-		
-		List prolist=prodDao.listPro();
-		
-		
-		model.put("pro",prolist);
-		return "AddProd";
-	}
-	
-	
-	
-	        
 }

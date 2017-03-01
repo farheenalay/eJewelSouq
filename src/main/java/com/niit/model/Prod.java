@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 public class Prod {
 	
 	@Id
-	@GeneratedValue
 	private int id;
 	
 	@Column

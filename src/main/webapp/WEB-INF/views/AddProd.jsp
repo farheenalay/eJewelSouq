@@ -113,7 +113,7 @@ th {
     <td><c:out value="${prol.description}"/></td>
     <td><c:url var="src" value="/resources/${prol.id}.jpg"></c:url>
     <img src="${src }" width="50" height="50"/> </td>
-    <td><a href="edit">edit</a></td>
+    <td><a href="editProduct?proid=${prol.id}">edit</a></td>
     <td><a href="delete">delete</a></td>
     
   </tr>

@@ -38,25 +38,29 @@ th {
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>
 <center><h2>Add Supplier</h2></center>
-        <form:form action="" method="post" commandName="addSupp">
+<c:set var="p" scope="session" value="${spedit}"/>
+<c:choose>
+<c:when test="${p==0}">
+
+        <form:form action="Supplier" method="post" commandName="addSupp">
            <form>
            <div align="center">
      <div class="form-group">
       <label class="col-md-4 control-label" for="Supplier ID">Supplier ID:</label>
       <div class="col-md-4">
-      <input type="text" class="form-control" name="sid" placeholder="Supplier ID" />
+      <input type="text" class="form-control" name="sid" value="${supData.sid}" />
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Supplier Name">Supplier Name:</label>
        <div class="col-md-4">
-      <input type="text" class="form-control" name="sname" placeholder="Supplier Name" />
+      <input type="text" class="form-control" name="sname" value="${supData.sname}" />
       </div> <br/> <br/> <br/>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="Supplier Description">Description:</label>
       <div class="col-md-4">
-      <textarea class="form-control" rows="5" id="comment" name="sdescription" placeholder="Description" /> </textarea>
+      <input type="text" class="form-control" name="sdescription" value="${supData.sdescription}" />
     </div><br/> <br/> <br/>
     </div>
     <br/> <br/> <br/>
@@ -65,6 +69,37 @@ th {
   </div>
   </form>
   </form:form>
+  </c:when>
+  <c:otherwise>
+  <form:form action="editsupplier" method="post" commandName="addSupp">
+           <form>
+           <div align="center">
+     <div class="form-group">
+      <label class="col-md-4 control-label" for="Supplier ID">Supplier ID:</label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="sid" value="${supData.sid}" />
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Supplier Name">Supplier Name:</label>
+       <div class="col-md-4">
+      <input type="text" class="form-control" name="sname" value="${supData.sname}" />
+      </div> <br/> <br/> <br/>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Supplier Description">Description:</label>
+      <div class="col-md-4">
+      <input type="text" class="form-control" name="sdescription" value="${supData.sdescription}" />
+    </div><br/> <br/> <br/>
+    </div>
+    <br/> <br/> <br/>
+    <button type="submit" class="btn btn-success">Edit Supplier</button>
+    <br/> <br/> <br/> <br/>
+  </div>
+  </form>
+  </form:form>
+  </c:otherwise>
+  </c:choose>
   <br/> <br/> <br/> <br/> <br/> <br/>
 <h2 style="background-color:rgb(255, 255, 255)"><center><bold> Supplier List </bold></center></h2>
 <table class="table table-bordered">
@@ -80,6 +115,8 @@ th {
     <td><c:out value="${supl.sid}"/></td>
     <td><c:out value="${supl.sname}"/></td>
     <td><c:out value="${supl.sdescription}"/></td>
+    <td><a href="EditS?supid=${supl.sid}">Edit</a></td>
+    <td><a href="delete">delete</a></td>
   </tr>
   </c:forEach>
 </table>

@@ -9,10 +9,9 @@ import javax.persistence.Id;
 
 @Entity
 public class Supplier {
-	@Id
-	@GeneratedValue
-	private int sid;
 	
+	@Id
+	private int sid;
 	
 	@Column
 	private String sname;

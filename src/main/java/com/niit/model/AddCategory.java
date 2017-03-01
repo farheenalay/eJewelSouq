@@ -9,7 +9,6 @@ import javax.persistence.Id;
 public class AddCategory {
 	
 	@Id
-	@GeneratedValue
 	private int cid;
 	
 	@Column
