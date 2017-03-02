@@ -34,7 +34,7 @@
     <td><center><c:out value="${prol.description}"/></center></td>
     <td><center><c:url var="src" value="/resources/${prol.id}.jpg"></c:url>
     <img src="${src }" width="50" height="50"/></center> </td>
-    
+    <td><a href="info?pid=${prol.id}">More Info</a></td>
  </tr>
   </c:forEach>
 </table>

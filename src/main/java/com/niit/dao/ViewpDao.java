@@ -39,4 +39,18 @@ public class ViewpDao {
 		return products;
 	}
 	
+	public Prod infoPro(int pid)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert called method");
+		session.beginTransaction();
+		
+		Prod infop=(Prod)session.get(Prod.class,pid);
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		return infop;
+	}
+	
 }

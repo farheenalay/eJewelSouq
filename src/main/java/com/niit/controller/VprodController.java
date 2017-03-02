@@ -5,6 +5,7 @@ package com.niit.controller;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.niit.dao.ViewpDao;
@@ -71,4 +73,24 @@ public class VprodController {
 		}
 		return "ViewProd";
 		}	
+	
+	
+	@RequestMapping(value="/info",method=RequestMethod.GET)
+	public String infoProduct(@RequestParam("pid")int pid,Map <String,Object> model)
+	{
+		
+		Prod product=vDao.infoPro(pid);
+		System.out.println(product.getId());
+		
+        List <Prod> pl=new ArrayList<Prod>();
+        
+        pl.add(product);
+        
+		model.put("addProd",pl);
+		
+		List prolist=vDao.listPro();
+		model.put("pro", prolist);
+		
+		return "Info";
+	}
 }
