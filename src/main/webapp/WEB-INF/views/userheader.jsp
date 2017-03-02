@@ -68,8 +68,7 @@
       <li><a href="Regi"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
       <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
       <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
-      <li><a href="AddProd"> Add Products </a></li>
-      <li><a href="Adpage"><span class="glyphicon glyphicon-user"></span> Admin </a></li>
+      <li><a href="ViewProd"> View Products </a></li>
       <li><a href="LoginUser"> User </a></li>
    </ul>
    <div class="col-sm-2 col-md-2 pull-right">

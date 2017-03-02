@@ -42,8 +42,17 @@ public class HomeController
 		return "Adpage";
 	}
 	
+	@RequestMapping ("/LoginUser")
+	public String user()
+	{
+		return "LoginUser";
+	}
 	
-	
+	@RequestMapping ("/ViewProd")
+	public String viewPro()
+	{
+		return "ViewProd";
+	}
 	}
 	
 
