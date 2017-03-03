@@ -14,21 +14,26 @@
 <c:url value="/resources/.jpg" var="url"></c:url>
 <c:forEach items="${addProd}" var="prol">
 
-  <center><h1><bold>Information of <c:out value="${prol.name}"/></bold></h1></center>
+ <h1><center><bold>Information of <c:out value="${prol.name}"/></bold></center></h1>
   
-  <br><center><c:url var="src" value="/resources/${prol.id}.jpg"></c:url>
-    <img src="${src }" width="50%" height="50%"/><center><br>
-    
-   <h2> 
+ <div><c:url var="src" value="/resources/${prol.id}.jpg"></c:url>
+    <img src="${src }" width="50%" height="50%" style="float:left"/>
+   
+   <h3><p style="float:right">
     <br><c:out value="${prol.name}"/><br>
     
     <br><c:out value="${prol.price}"/><br>
     
-    <br><c:out value="${prol.description}"/><br></h2>
+    <br><c:out value="${prol.description}"/><br></p></h3></div>
+<form action="AddtoCart">
+<input type="hidden" name="prid" value="${prol.id}">
+<br> <br> <br> <br>
+Quantity <input type="text" name="q"/>
+<input type="submit" value="Add to Cart"/>
 </c:forEach>
-<br> <br> <br> <br> <br> <br> 
-<button type="submit" class="btn btn-success">  Add to Cart  </button>
-<br> <br> <br> <br> <br> <br> <br> <br> <br>
+</form>
+ <br> <br> <br> <br> <br> <br> <br> <br> <br>
 <jsp:include page="footer.jsp"></jsp:include>
+
 </body>
 </html>
