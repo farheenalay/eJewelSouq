@@ -18,7 +18,7 @@ import com.niit.model.Prod;
 public class CartController {
 	
 	@Autowired
-	CartDao cDao;
+	CartDao crtDao;
 	
 	@Autowired
 	ProdDao pdao;
@@ -29,17 +29,17 @@ public class CartController {
 		Prod p=pdao.getP(pid);
 		Cart c=new Cart();
 		
-		c.setCartid(115);
-		c.setCartuser("anam");
+		c.setCartid(116);
+		c.setCartuser("arshee");
 		c.setProductid(p.getId());
 		c.setProdname(p.getName());
 		c.setProdprice(p.getPrice());
 		c.setQuantity(qty);
 		c.setCarttotal(p.getPrice()*qty );
 		
-		cDao.saveCart(c);
+		crtDao.saveCart(c);
 		
-		List clist=cDao.listCart();
+		List clist=crtDao.listCart();
 		model.put("crt", clist);
 		
 		return "ShowCart";

@@ -15,6 +15,7 @@
   <thead>
    <tr>
     <th><center>Cart ID</center></th>
+    <th><center>Cart User</center></th>
     <th><center>Product Name</center></th>
     <th><center>Product Price</center></th>
     <th><center>Quantity</center></th>
@@ -24,6 +25,7 @@
   <c:forEach items="${crt }" var="cl">
   <tr>
     <td><c:out value="${cl.cartid}"/></td>
+    <td><c:out value="${cl.cartuser}"/></td>
     <td><c:out value="${cl.prodname}"/></td>
     <td><c:out value="${cl.prodprice}"/></td>
     <td><c:out value="${cl.quantity}"/></td>

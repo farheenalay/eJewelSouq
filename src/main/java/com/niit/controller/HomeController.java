@@ -6,18 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController 
 {
-	@RequestMapping ("/Regstr")
+	@RequestMapping ("/Register")
 	public String regt()
 	{
-		return "Regi";
+		return "Register";
 	}
 	
-	@RequestMapping ("/login") 
-	public String log()
-	{
-		return "login";
-	}
-    
+	
 	@RequestMapping ("/abtus")
 	public String ab()
 	{

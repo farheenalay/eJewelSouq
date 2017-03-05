@@ -5,41 +5,17 @@
 	<servlet-name>dispatcher</servlet-name>
 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   </servlet>
-  <servlet>
-  	<description>
-  	</description>
-  	<display-name>register</display-name>
-  	<servlet-name>register</servlet-name>
-  	<servlet-class>register</servlet-class>
-  </servlet>
-  <servlet>
-  	<description>
-  	</description>
-  	<display-name>Login</display-name>
-  	<servlet-name>Login</servlet-name>
-  	<servlet-class>Login</servlet-class>
-  </servlet>
-  <servlet-mapping>
+<servlet-mapping>
 	<servlet-name>dispatcher</servlet-name>
 	<url-pattern>/</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>register</servlet-name>
-  	<url-pattern>/register</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Login</servlet-name>
-  	<url-pattern>/Login</url-pattern>
-  </servlet-mapping>
-  <context-param>
+</servlet-mapping>
+<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/dispatcher-servlet.xml,/WEB-INF/AppContext.xml</param-value>
+		<param-value>/WEB-INF/dispatcher-servlet.xml,/WEB-INF/sp-secure.xml,/WEB-INF/AppContext.xml</param-value>
 </context-param>
   <listener>
 		<listener-class>
 			org.springframework.web.context.ContextLoaderListener
 		</listener-class>
   </listener>
-  
-  
 </web-app>
