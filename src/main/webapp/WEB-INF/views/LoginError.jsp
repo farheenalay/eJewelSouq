@@ -4,14 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title> User Page </title>
-<style type="text/css"> 
-body {background-image: url("resources/.jpg");} 
- </style>
+<title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="userheader.jsp"></jsp:include>
+<h1> Ur not authurised user please login</h1> <br><br>
 
-<jsp:include page="footer.jsp"></jsp:include>
+<a href="Login">Login here</a>
 </body>
 </html>

@@ -66,11 +66,11 @@
    <div class="collapse navbar-collapse navbar-menubuilder">
     <ul class="nav navbar-nav navbar-left">
    <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home </a></li>
-      <li><a href="Regi"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
-      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
-      <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
-      <li><a href="Adpage"><span class="glyphicon glyphicon-user"></span> Admin </a></li>
-      <li><a href="AddProd"><span class="glyphicon glyphicon-menu-hamburger"></span> Products </a></li>
+      
+      
+      
+      
+      <li><a href="AddProd"><span class="glyphicon glyphicon-menu-hamburger"></span> Add Products </a></li>
       <li><a href="Supplier"><span class="glyphicon glyphicon-menu-hamburger"></span> Supplier </a></li>
       <li><a href="Category"><span class="glyphicon glyphicon-menu-hamburger"></span> Category </a></li>
    </ul>
@@ -84,8 +84,7 @@
         </div>
         </form>
 </div>
- <ul class="nav navbar-nav navbar-right">
-  <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in </a></li></ul>
+ 
 </div>
 </div>
 </div>

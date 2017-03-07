@@ -24,7 +24,7 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 <security:intercept-url pattern="/adminhome" access="hasRole('ADMIN_ROLE')" />
 
   
-<security:intercept-url pattern="/AddToCart" access="hasRole('USER_ROLE')" />  
+<security:intercept-url pattern="/AddtoCart" access="hasRole('USER_ROLE')" />  
     
 
 <security:form-login login-page="/Login" default-target-url="/" login-processing-url="/perform_login" authentication-failure-url="/LoginError" authentication-success-forward-url="/login_session_attributes" />

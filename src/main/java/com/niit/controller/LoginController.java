@@ -43,10 +43,12 @@ public class LoginController {
 		return "Login";
 	}
 	
+	
+	
 	@RequestMapping("/LoginError")
 	public String loginErrorShow()
 	{
-		return "Login";
+		return "LoginError";
 	}
 	@RequestMapping("/LoginSuccess")
 	public String loginSuccess()
@@ -63,6 +65,7 @@ public class LoginController {
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/login_session_attributes")
 	public String login_session_attributes(HttpSession session,Model model) {
+		System.out.println("at login session");
 		String userid = SecurityContextHolder.getContext().getAuthentication().getName();
 		UserCredential  user = catDAO.getUser(userid);
 		session.setAttribute("userId", user.getUserName());

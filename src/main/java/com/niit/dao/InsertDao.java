@@ -82,7 +82,7 @@ public class InsertDao {
 				    
 				//creating transaction object    
 				Transaction t=session.beginTransaction();    
-		String hql = "from "+" UserCreadential "+" where username=" + "'"+username+"'";
+		String hql = "from "+" UserCredential "+" where username=" + "'"+username+"'";
 		@SuppressWarnings("rawtypes")
 		Query query = session.createQuery(hql);
 		

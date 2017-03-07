@@ -65,11 +65,10 @@
    <div class="collapse navbar-collapse navbar-menubuilder">
    <ul class="nav navbar-nav navbar-left">
    <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      <li><a href="Regi"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
       <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
       <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
       <li><a href="ViewProd"> View Products </a></li>
-      <li><a href="LoginUser"> User </a></li>
+      
    </ul>
    <div class="col-sm-2 col-md-2 pull-right">
         <form class="navbar-form" role="search">
@@ -82,6 +81,7 @@
         </form>
    </div>
    <ul class="nav navbar-nav navbar-right">
+   <li><a href="Regi"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
    <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Log in  </a></li></ul>
 </div>
 </div>
