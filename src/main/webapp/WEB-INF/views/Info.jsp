@@ -9,7 +9,7 @@
 <title>Single Product Info</title>
 </head>
 <body>
-<jsp:include page="userheader.jsp"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
 
 <c:url value="/resources/.jpg" var="url"></c:url>
 <c:forEach items="${addProd}" var="prol">

@@ -19,7 +19,7 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 
 
 
-			
+	<access-denied-handler error-page="/Login" />		
     
 <security:intercept-url pattern="/adminhome" access="hasRole('ADMIN_ROLE')" />
 

@@ -18,7 +18,7 @@ import com.niit.model.UserCredential;
 public class LoginController {
 	int count=0;
 	@Autowired
-	InsertDao catDAO;
+	InsertDao insDAO;
 	
 	LoginController()
 	{
@@ -67,7 +67,7 @@ public class LoginController {
 	public String login_session_attributes(HttpSession session,Model model) {
 		System.out.println("at login session");
 		String userid = SecurityContextHolder.getContext().getAuthentication().getName();
-		UserCredential  user = catDAO.getUser(userid);
+		UserCredential  user = insDAO.getUser(userid);
 		session.setAttribute("userId", user.getUserName());
 		session.setAttribute("name", user.getPassword());
 		session.setAttribute("LoggedIn", "true");
@@ -81,7 +81,7 @@ public class LoginController {
 		  
 		     if (authority.getAuthority().equals(role)) 
 		     {
-		    	 session.setAttribute("UserLoggedIn", true);
+		    	 session.setAttribute("UserLoggedIn",true);
 		    	 session.setAttribute("UserName", user.getUserName());
 			 page="/index1";
 		    	 session.setAttribute("test",1);

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -64,6 +65,8 @@
    </div>
    <div class="collapse navbar-collapse navbar-menubuilder">
    <ul class="nav navbar-nav navbar-left">
+   
+  <li>Welcome   <c:out value="${UserName}"/></li>
    <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
       <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
@@ -82,7 +85,17 @@
    </div>
    <ul class="nav navbar-nav navbar-right">
    <li><a href="Register"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
-   <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Log in  </a></li></ul>
+   <c:choose>
+<c:when test="${UserLoggedIn}" >
+<li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li></ul>
+  
+ </c:when>
+ <c:otherwise>
+     <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Log in  </a></li></ul>
+     </c:otherwise>
+    </c:choose>
+   
+  
 </div>
 </div>
 </div>

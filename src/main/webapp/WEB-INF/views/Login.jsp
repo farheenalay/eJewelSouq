@@ -38,7 +38,7 @@ body {background-image: url("resources/bki.jpg");}
     
     
   <center> <button type="submit" class="btn btn-success"> Login </button>     <button type="button" class="btn btn-warning">Cancel</button></center>
-  <br><br><br><br><input type="checkbox" checked="checked"> Remember me
+  <br><br><br><br><input type="checkbox" checked="checked"> Remember me <br> <br>
   
 <span class="psw">Forgot <a href="#">password?</a></span>
 <br><br><br><br>

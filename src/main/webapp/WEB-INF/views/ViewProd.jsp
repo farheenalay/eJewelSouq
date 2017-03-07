@@ -9,7 +9,7 @@
 <title>View Product</title>
 </head>
 <body>
-<jsp:include page="userheader.jsp"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
 <form:form action="ViewProd" method="post" commandName="addProd" enctype="multipart/form-data">
 <h2 style="background-color:rgb(255, 255, 255)"><center><bold> Product List </bold></center></h2>
 <table class="table table-bordered">
