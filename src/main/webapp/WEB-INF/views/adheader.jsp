@@ -65,7 +65,7 @@
    </div>
    <div class="collapse navbar-collapse navbar-menubuilder">
     <ul class="nav navbar-nav navbar-left">
-   <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+   <li class="active"><a href="Adpage.jsp"><span class="glyphicon glyphicon-home"></span> Home </a></li>
       
       
       
@@ -73,6 +73,9 @@
       <li><a href="AddProd"><span class="glyphicon glyphicon-menu-hamburger"></span> Add Products </a></li>
       <li><a href="Supplier"><span class="glyphicon glyphicon-menu-hamburger"></span> Supplier </a></li>
       <li><a href="Category"><span class="glyphicon glyphicon-menu-hamburger"></span> Category </a></li>
+   
+   <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li>
+   
    </ul>
     <div class="col-sm-2 col-md-2 pull-right">
         <form class="navbar-form" role="search">

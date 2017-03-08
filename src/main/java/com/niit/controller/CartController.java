@@ -3,6 +3,8 @@ package com.niit.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,13 +26,14 @@ public class CartController {
 	ProdDao pdao;
 	
 	@RequestMapping(value="/AddtoCart",method=RequestMethod.GET)
-	public String adCart(@RequestParam ("prid")int pid,@RequestParam ("q")int qty,Map<String,Object> model)
+	public String adCart(@RequestParam ("prid")int pid,@RequestParam ("q")int qty,HttpSession session,Map<String,Object> model)
 	{
 		Prod p=pdao.getP(pid);
 		Cart c=new Cart();
+		int x=crtDao.maxId();
+		c.setCartid(++x);
 		
-		c.setCartid(116);
-		c.setCartuser("arshee");
+		c.setCartuser((String)session.getAttribute("UserName"));
 		c.setProductid(p.getId());
 		c.setProdname(p.getName());
 		c.setProdprice(p.getPrice());
@@ -39,7 +42,21 @@ public class CartController {
 		
 		crtDao.saveCart(c);
 		
-		List clist=crtDao.listCart();
+		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
+		model.put("crt", clist);
+		
+		return "ShowCart";
+		
+	}
+	
+
+	
+	@RequestMapping(value="/removecart",method=RequestMethod.GET)
+	public String RemoveCart(@RequestParam("crd")int crdd,HttpSession session,Map <String,Object> model)
+	{
+		crtDao.removeCart(crdd);
+		
+		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
 		model.put("crt", clist);
 		
 		return "ShowCart";

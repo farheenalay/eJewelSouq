@@ -11,16 +11,22 @@ public class Cart implements Serializable{
 
 	@Id
 	private int cartid;
+	
 	@Column
 	private String cartuser;
+	
 	@Column
 	private int productid;
+	
 	@Column
 	private String prodname;
+	
 	@Column
 	private double prodprice;
+	
 	@Column
 	private int quantity;
+	
 	@Column
 	private double carttotal;
 	
