@@ -23,12 +23,12 @@
     border-radius: 4px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: rgba(119, 119, 119, 1);
+    color: black;
     background-color: rgba(248, 248, 248, 0);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(51, 51, 51, 1);
+    color: black;
     background-color: rgba(248, 248, 248, 0);
 }
 
@@ -60,13 +60,13 @@
    </div>
    <div class="collapse navbar-collapse navbar-menubuilder">
     <ul class="nav navbar-nav navbar-left">
-      <li class="active"><a href="Adpage.jsp"><span class="glyphicon glyphicon-home"></span> Home </a></li>
-      <li><a href="AddProd"><span class="glyphicon glyphicon-menu-hamburger"></span> Add Products </a></li>
-      <li><a href="Supplier"><span class="glyphicon glyphicon-menu-hamburger"></span> Supplier </a></li>
-      <li><a href="Category"><span class="glyphicon glyphicon-menu-hamburger"></span> Category </a></li>
+      <li class="active"><a href="Adpage.jsp"><span class="glyphicon glyphicon-home fa-2x"></span><strong> Home </strong></a></li>
+      <li><a href="AddProd"><span class="glyphicon glyphicon-menu-hamburger fa-2x"></span><strong> Add Products </strong></a></li>
+      <li><a href="Supplier"><span class="glyphicon glyphicon-menu-hamburger fa-2x"></span><strong> Supplier </strong></a></li>
+      <li><a href="Category"><span class="glyphicon glyphicon-menu-hamburger fa-2x"></span><strong> Category </strong></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li>
+      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in fa-2x"></span><strong> Logout  </strong></a></li>
     </ul>
    
 </div>

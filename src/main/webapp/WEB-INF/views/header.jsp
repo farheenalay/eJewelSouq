@@ -24,12 +24,12 @@
     border-radius: 4px;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
-    color: rgba(119, 119, 119, 1);
+    color: black;
     background-color: rgba(248, 248, 248, 0);
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
-    color: rgba(51, 51, 51, 1);
+    color: black;
     background-color: rgba(248, 248, 248, 0);
 }
 
@@ -60,10 +60,10 @@
    </div>
    <div class="collapse navbar-collapse navbar-menubuilder">
    <ul class="nav navbar-nav navbar-left">
-   <li align="center" class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
-      <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
-      <li><a href="ViewProd"> View Products </a></li>
+   <li align="center" class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home fa-2x"></span><strong> Home </strong></a></li>
+      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign fa-2x"></span><strong> About Us </strong></a></li>
+      <li><a href="contact"><span class="glyphicon glyphicon-envelope fa-2x"></span><strong> Contact Us </strong></a></li>
+      <li><a href="ViewProd"><span class="glyphicon glyphicon-th-large fa-2x"></span><strong> View Products </strong></a></li>
   </ul>
    
    <ul class="nav navbar-nav navbar-right">
@@ -71,15 +71,15 @@
 <c:choose>
  <c:when test="${UserLoggedIn}">
  <li><strong><h4>Welcome <c:out value="${UserName}"></c:out></h4></strong></li>
- <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li>
+ <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in fa-2x"></span><strong> LogOut </strong></a></li>
  <bold><strong><c:out value="${cnt}"></c:out></strong></bold>
  <li><a href="showCart"><span class="glyphicon glyphicon-shopping-cart fa-3x"></span></a>
 </li></ul> <br/> <br/>
 
 </c:when>
   <c:otherwise>
-     <li><a href="Register"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
-     <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Log in  </a></li>
+     <li><a href="Register"><span class="glyphicon glyphicon-pencil fa-2x"></span><strong> Register </strong></a></li>
+     <li><a href="Login"><span class="glyphicon glyphicon-log-in fa-2x"></span><strong> Login </strong></a></li>
   </c:otherwise>
 </c:choose>
   </ul> 
