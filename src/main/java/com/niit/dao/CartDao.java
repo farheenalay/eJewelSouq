@@ -59,11 +59,14 @@ public class CartDao {
 	    Session session=sessionFactory.openSession();
 		System.out.println("insert called method");
 		session.beginTransaction();
+		
+		
 		String SQL_QUERY = "select max(cartid) from Cart";
 		List cartlist=session.createQuery(SQL_QUERY).list();
 					
 		session.getTransaction().commit();
 		session.close();
+		
 		if(cartlist==null)
 		{
 		 System.out.println("if"+cartlist);

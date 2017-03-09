@@ -16,7 +16,7 @@
     color: rgba(119, 119, 119, 1);
 }
 #custom-bootstrap-menu.navbar-default {
-    font-size: 14px;
+    font-size: 16px;
     background-color: rgba(194, 172, 46, 1);
     background: -webkit-linear-gradient(top, rgba(240, 232, 168, 1) 0%, rgba(194, 172, 46, 1) 100%);
     background: linear-gradient(to bottom, rgba(240, 232, 168, 1) 0%, rgba(194, 172, 46, 1) 100%);
@@ -32,12 +32,7 @@
     color: rgba(51, 51, 51, 1);
     background-color: rgba(248, 248, 248, 0);
 }
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(85, 85, 85, 1);
-    background-color: rgba(231, 231, 231, 1);
-}
+
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #ddd;
 }
@@ -61,40 +56,33 @@
     <div class="navbar-header">
     <class="navbar-brand brand-name">
        <a href="index.jsp"><img class="img-responsive2"       
-       src="resources/logo.png" height=100px width=130px></a>
+       src="resources/logo.png" height=80px width=130px align="left"></a>
    </div>
    <div class="collapse navbar-collapse navbar-menubuilder">
    <ul class="nav navbar-nav navbar-left">
-   
-  <li>Welcome   <c:out value="${UserName}"/></li>
-   <li class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+   <li align="center" class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <li><a href="abtus"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
       <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
       <li><a href="ViewProd"> View Products </a></li>
-      <li><a href="adminhome"><span class="glyphicon glyphicon-user"></span> Admin </a></li>
-   </ul>
-   <div class="col-sm-2 col-md-2 pull-right">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="q">
-        <div class="input-group-btn">
-        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-        </div>
-        </div>
-        </form>
-   </div>
-   <ul class="nav navbar-nav navbar-right">
-   <li><a href="Register"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
-   <c:choose>
-<c:when test="${UserLoggedIn}" >
-<li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li></ul>
-  
- </c:when>
- <c:otherwise>
-     <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Log in  </a></li></ul>
-     </c:otherwise>
-    </c:choose>
+  </ul>
    
+   <ul class="nav navbar-nav navbar-right">
+   
+<c:choose>
+ <c:when test="${UserLoggedIn}">
+ <li><strong><h4>Welcome <c:out value="${UserName}"></c:out></h4></strong></li>
+ <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li>
+ <bold><strong><c:out value="${cnt}"></c:out></strong></bold>
+ <li><a href="showCart"><span class="glyphicon glyphicon-shopping-cart fa-3x"></span></a>
+</li></ul> <br/> <br/>
+
+</c:when>
+  <c:otherwise>
+     <li><a href="Register"><span class="glyphicon glyphicon-pencil"></span> Register </a></li>
+     <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Log in  </a></li>
+  </c:otherwise>
+</c:choose>
+  </ul> 
   
 </div>
 </div>

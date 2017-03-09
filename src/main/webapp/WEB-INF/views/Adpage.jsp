@@ -7,7 +7,8 @@
 </head>
 <body>
 <jsp:include page="adheader.jsp"></jsp:include>
-<h2>Admin Page</h2>
+
+<center><h2>Admin Page</h2></center>
 
 <jsp:include page="footer.jsp"></jsp:include>
 </body>

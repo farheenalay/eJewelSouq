@@ -15,7 +15,7 @@
     color: rgba(119, 119, 119, 1);
 }
 #custom-bootstrap-menu.navbar-default {
-    font-size: 14px;
+    font-size: 16px;
     background-color: rgba(194, 172, 46, 1);
     background: -webkit-linear-gradient(top, rgba(240, 232, 168, 1) 0%, rgba(194, 172, 46, 1) 100%);
     background: linear-gradient(to bottom, rgba(240, 232, 168, 1) 0%, rgba(194, 172, 46, 1) 100%);
@@ -31,12 +31,7 @@
     color: rgba(51, 51, 51, 1);
     background-color: rgba(248, 248, 248, 0);
 }
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
-#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
-    color: rgba(85, 85, 85, 1);
-    background-color: rgba(231, 231, 231, 1);
-}
+
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #ddd;
 }
@@ -61,33 +56,19 @@
     
       <class="navbar-brand brand-name">
        <a href="index.jsp"><img class="img-responsive2"       
-       src="resources/logo.png" height=100px width=130px></a>
+       src="resources/logo.png" height=80px width=130px align="left"></a>
    </div>
    <div class="collapse navbar-collapse navbar-menubuilder">
     <ul class="nav navbar-nav navbar-left">
-   <li class="active"><a href="Adpage.jsp"><span class="glyphicon glyphicon-home"></span> Home </a></li>
-      
-      
-      
-      
+      <li class="active"><a href="Adpage.jsp"><span class="glyphicon glyphicon-home"></span> Home </a></li>
       <li><a href="AddProd"><span class="glyphicon glyphicon-menu-hamburger"></span> Add Products </a></li>
       <li><a href="Supplier"><span class="glyphicon glyphicon-menu-hamburger"></span> Supplier </a></li>
       <li><a href="Category"><span class="glyphicon glyphicon-menu-hamburger"></span> Category </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li>
+    </ul>
    
-   <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout  </a></li>
-   
-   </ul>
-    <div class="col-sm-2 col-md-2 pull-right">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="q">
-        <div class="input-group-btn">
-        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-        </div>
-        </div>
-        </form>
-</div>
- 
 </div>
 </div>
 </div>

@@ -18,7 +18,7 @@ import com.niit.model.Prod;
 
 @Controller
 public class CartController {
-	
+	int crtcnt=0;
 	@Autowired
 	CartDao crtDao;
 	
@@ -28,6 +28,8 @@ public class CartController {
 	@RequestMapping(value="/AddtoCart",method=RequestMethod.GET)
 	public String adCart(@RequestParam ("prid")int pid,@RequestParam ("q")int qty,HttpSession session,Map<String,Object> model)
 	{
+		crtcnt++;
+		session.setAttribute("cnt",crtcnt);
 		Prod p=pdao.getP(pid);
 		Cart c=new Cart();
 		int x=crtDao.maxId();
@@ -64,6 +66,16 @@ public class CartController {
 	}
 	
 	
+	@RequestMapping(value="/showCart",method=RequestMethod.GET)
+	public String showCart(HttpSession session,Map <String,Object> model)
+	{
+
+		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
+		model.put("crt", clist);
+		
+		return "ShowCart";
+		
+	}
 	
 
 }

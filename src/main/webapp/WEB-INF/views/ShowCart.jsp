@@ -10,7 +10,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<h2><center><bold> Cart List </bold></center></h2>
+<h2><center><bold>Items in your Cart</bold></center></h2>
 <table class="table table-bordered">
   <thead>
    <tr>
@@ -32,16 +32,16 @@
     <td><c:out value="${cl.carttotal}"/></td>
     <td><a href="removecart?crd=${cl.cartid}">Remove Item</a></td>
 </c:forEach>
-</table>
-<br/>
-<div align="justify">
-<form action="ViewProd">
-<input type="submit" value="Continue Shopping" class="btn btn-success"/>
-</form><br/><br/>
-<div align="justify">
+<tr><td><form action="ViewProd">
+<input type="submit" value="Continue Shopping" class="btn btn-success" />
+</form></td>
+<td>
 <form action="">
 <input type="submit" value="Check Out" class="btn btn-danger"/>
-</form></div></div>
+</form></td></tr>
+
+</table>
+<br/><br/><br/>
 
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
