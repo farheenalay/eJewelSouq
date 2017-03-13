@@ -61,7 +61,7 @@
    <div class="collapse navbar-collapse navbar-menubuilder">
    <ul class="nav navbar-nav navbar-left">
    <li align="center" class="active"><a href="index.jsp"><span class="glyphicon glyphicon-home fa-2x"></span><strong> Home </strong></a></li>
-      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign fa-2x"></span><strong> About Us </strong></a></li>
+      <li><a href="abtus"><span class="glyphicon glyphicon-info-sign fa-2x" ></span><strong> About Us </strong></a></li>
       <li><a href="contact"><span class="glyphicon glyphicon-envelope fa-2x"></span><strong> Contact Us </strong></a></li>
       <li><a href="ViewProd"><span class="glyphicon glyphicon-th-large fa-2x"></span><strong> View Products </strong></a></li>
   </ul>

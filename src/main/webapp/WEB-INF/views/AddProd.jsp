@@ -175,8 +175,8 @@ th {
     <td><c:out value="${prol.description}"/></td>
     <td><c:url var="src" value="/resources/${prol.id}.jpg"></c:url>
     <img src="${src }" width="50" height="50"/> </td>
-    <td><a href="editProduct?proid=${prol.id}">edit</a></td>
-    <td><a href="delpro?prid=${prol.id }">delete</a></td>
+    <td><a href="editProduct?proid=${prol.id}"><span class="glyphicon glyphicon-scissors"></span> Edit </a></td>
+    <td><a href="delpro?prid=${prol.id }"><span class="glyphicon glyphicon-remove"></span> Delete </a></td>
     
   </tr>
   </c:forEach>

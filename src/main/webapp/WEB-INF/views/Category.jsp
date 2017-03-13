@@ -107,13 +107,13 @@ th {
     <th><center>Category Description</center></th>
     </tr>
   </thead>
-  <c:forEach items="${catlist}" var="empl">
+  <c:forEach items="${catlist}" var="cl">
   <tr>
-    <td><c:out value="${empl.cid}"/></td>
-    <td><c:out value="${empl.cname}"/></td>
-    <td><c:out value="${empl.catdes}"/></td>
-     <td><a href="edit?catid=${empl.cid}">edit</a></td>
-    <td><a href="deletecat?id=${empl.cid}">delete</a></td>
+    <td><c:out value="${cl.cid}"/></td>
+    <td><c:out value="${cl.cname}"/></td>
+    <td><c:out value="${cl.catdes}"/></td>
+     <td><a href="edit?catid=${cl.cid}"><span class="glyphicon glyphicon-scissors"></span> Edit </a></td>
+    <td><a href="deletecat?id=${cl.cid}"><span class="glyphicon glyphicon-remove"></span> Delete </a></td>
   </tr>
   </c:forEach>
 </table>
