@@ -30,11 +30,12 @@
     <td><c:out value="${cl.prodprice}"/></td>
     <td><c:out value="${cl.quantity}"/></td>
     <td><c:out value="${cl.carttotal}"/></td>
-    <td><a href="removecart?crd=${cl.cartid}">Remove Item</a></td>
+    <td><a href="removecart?crd=${cl.cartid}"> Remove from Cart </a></td>
 </c:forEach>
 <tr><td><form action="ViewProd">
 <input type="submit" value="Continue Shopping" class="btn btn-success" />
 </form></td>
+<tr>
 <td>
 <form action="">
 <input type="submit" value="Check Out" class="btn btn-danger"/>

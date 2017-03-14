@@ -25,13 +25,24 @@
     <br><c:out value="${prol.price}"/><br>
     
     <br><c:out value="${prol.description}"/><br></p></h3></div>
+   <br/><br/><br/><br/><br/>
+   
 <form action="AddtoCart">
 <input type="hidden" name="prid" value="${prol.id}">
-<br> <br> <br> <br>
-Quantity <input type="text" name="q"/>
-<input type="submit" value="Add to Cart"/>
+
+<div class="form-group">
+<label class="col-md-4 control-label"> Quantity </label>
+<div class="col-md-4">
+ <input type="text" class="form-control" name="q">
+ </div></div>
+<br/><br/><br/><br/>
+<input type="submit" value="Add to Cart" class="btn btn-success"/>
+
+</form> 
 </c:forEach>
-</form>
+
+
+
  <br> <br> <br> <br> <br> <br> <br> <br> <br>
 <jsp:include page="footer.jsp"></jsp:include>
 

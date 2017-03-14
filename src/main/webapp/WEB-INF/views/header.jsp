@@ -67,12 +67,11 @@
   </ul>
    
    <ul class="nav navbar-nav navbar-right">
-   
 <c:choose>
  <c:when test="${UserLoggedIn}">
- <li><strong><h4>Welcome <c:out value="${UserName}"></c:out></h4></strong></li>
+ <li><h3><strong><center>Welcome <c:out value="${UserName}"></c:out></center></strong></h3></li>
  <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in fa-2x"></span><strong> LogOut </strong></a></li>
- <bold><strong><c:out value="${cnt}"></c:out></strong></bold>
+<strong><c:out value="${cnt}"></c:out></strong>
  <li><a href="showCart"><span class="glyphicon glyphicon-shopping-cart fa-3x"></span></a>
 </li></ul> <br/> <br/>
 
@@ -82,7 +81,7 @@
      <li><a href="Login"><span class="glyphicon glyphicon-log-in fa-2x"></span><strong> Login </strong></a></li>
   </c:otherwise>
 </c:choose>
-  </ul> 
+
   
 </div>
 </div>
