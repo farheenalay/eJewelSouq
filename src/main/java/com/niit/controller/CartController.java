@@ -77,5 +77,14 @@ public class CartController {
 		
 	}
 	
+	@RequestMapping(value="/checkout",method=RequestMethod.GET)
+	public String chckout(@RequestParam("crd") int crdd,HttpSession session, Map <String,Object> model)
+	{
+		crtDao.checkout(crdd);
+		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
+		model.put("crt", clist);
+		
+		return "CheckOut";
+	}
 
 }

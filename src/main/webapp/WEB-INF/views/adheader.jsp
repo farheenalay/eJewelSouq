@@ -60,7 +60,6 @@
    </div>
    <div class="collapse navbar-collapse navbar-menubuilder">
     <ul class="nav navbar-nav navbar-left">
-      <li class="active"><a href="Adpage.jsp"><span class="glyphicon glyphicon-home fa-2x"></span><strong> Home </strong></a></li>
       <li><a href="AddProd"><span class="glyphicon glyphicon-menu-hamburger fa-2x"></span><strong> Add Products </strong></a></li>
       <li><a href="Supplier"><span class="glyphicon glyphicon-menu-hamburger fa-2x"></span><strong> Supplier </strong></a></li>
       <li><a href="Category"><span class="glyphicon glyphicon-menu-hamburger fa-2x"></span><strong> Category </strong></a></li>

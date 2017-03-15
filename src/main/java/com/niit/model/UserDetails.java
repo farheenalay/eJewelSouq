@@ -8,33 +8,47 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 
 
+
+
+
 @Entity
 public class UserDetails implements Serializable{
 
+	
+	
 	@Id
-	private int userId;
-	@Column
 	private String userName;
+	
 	@Column
 	private String name;
+	
 	@Column
 	private String password;
+	
 	@Column
 	private String mobile;
+	
 	@Column
 	private String email;
+	
+	@Column
+	private String billadd;
+	
+	@Column
+	private String shipadd;
+	
+	@Column
+	private String zipcode;
+	
+	@Column
+	private String cntry;
 	@Transient
 	private String role;
 	@Transient
 	private boolean enabled;
 	
 	
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+	
 	public String getUserName() {
 		return userName;
 	}
@@ -64,6 +78,30 @@ public class UserDetails implements Serializable{
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getBilladd() {
+		return billadd;
+	}
+	public void setBilladd(String billadd) {
+		this.billadd = billadd;
+	}
+	public String getShipadd() {
+		return shipadd;
+	}
+	public void setShipadd(String shipadd) {
+		this.shipadd = shipadd;
+	}
+	public String getZipcode() {
+		return zipcode;
+	}
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+	public String getCntry() {
+		return cntry;
+	}
+	public void setCntry(String cntry) {
+		this.cntry = cntry;
 	}
 	public String getRole() {
 		return role;

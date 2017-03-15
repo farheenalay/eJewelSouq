@@ -10,12 +10,13 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<h2><center><bold>Items in your Cart</bold></center></h2>
+<h2><center>Items in your Cart</center></h2>
 <table class="table table-bordered">
   <thead>
    <tr>
     <th><center>Cart ID</center></th>
     <th><center>Cart User</center></th>
+    <th><center>Product ID</center></th>
     <th><center>Product Name</center></th>
     <th><center>Product Price</center></th>
     <th><center>Quantity</center></th>
@@ -26,22 +27,18 @@
   <tr>
     <td><c:out value="${cl.cartid}"/></td>
     <td><c:out value="${cl.cartuser}"/></td>
+    <td><c:out value="${cl.productid}"/></td>
     <td><c:out value="${cl.prodname}"/></td>
     <td><c:out value="${cl.prodprice}"/></td>
     <td><c:out value="${cl.quantity}"/></td>
     <td><c:out value="${cl.carttotal}"/></td>
     <td><a href="removecart?crd=${cl.cartid}"> Remove from Cart </a></td>
-</c:forEach>
-<tr><td><form action="ViewProd">
-<input type="submit" value="Continue Shopping" class="btn btn-success" />
-</form></td>
-<tr>
-<td>
-<form action="">
-<input type="submit" value="Check Out" class="btn btn-danger"/>
-</form></td></tr>
 
 </table>
+<br/><br/><br/>
+<p align="left"><a href="ViewProd"> Continue Shopping </a>
+<p align="right"><a href="checkout?crd=${cl.cartid}"> Check Out </a></p></p>
+</c:forEach>
 <br/><br/><br/>
 
 <jsp:include page="footer.jsp"></jsp:include>

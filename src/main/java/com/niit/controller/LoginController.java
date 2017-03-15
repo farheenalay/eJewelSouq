@@ -22,7 +22,7 @@ public class LoginController {
 	
 	LoginController()
 	{
-		System.out.println("at Controllerrrrrrrrrrrrrrrrrrr");
+		System.out.println("at Controllerrrrrrrr");
 	}
 	
 	

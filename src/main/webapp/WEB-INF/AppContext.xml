@@ -8,9 +8,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
-        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
-        http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.xsd">
- 
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+       
+
  <!--  -->
     <beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <beans:property name="driverClassName" value="org.h2.Driver" />
@@ -40,7 +40,7 @@
     <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
      <beans:property name="sessionFactory" ref="sessionFactory" />
     </beans:bean>
-    
-    
    
+    
+  
 </beans:beans>

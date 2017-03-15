@@ -7,7 +7,11 @@
 <title>Registration success</title>
 </head>
 <body>
-<h1> Registration success</h1>
-<a href="Login">Login</a>
+<jsp:include page="header.jsp"></jsp:include>
+<h1><strong>REGISTRATION SUCCESS</strong></h1>
+<br/><br/><br/><br/>
+<a href="Login">Go to Login</a>
+
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

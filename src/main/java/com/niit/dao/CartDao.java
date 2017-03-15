@@ -93,6 +93,19 @@ public class CartDao {
 		return rc;
 				
 	}
-			  
+		
+	public Cart checkout(int crd)
+	{
+		Session session=sessionFactory.openSession();
+		System.out.println("insert method called");
+		session.beginTransaction();
+		
+		Cart rc = (Cart)session.get(Cart.class,crd);
+		
+		session.getTransaction().commit();
+		session.close();
+		return rc;
+				
+	}
 			  
 }
