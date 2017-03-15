@@ -7,25 +7,55 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>CheckOut</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css"> 
+body {
+    margin-top: 20px;
+}
+</style>
 </head>
 <body>
-Cart User: ${cl.cartuser}<br/>
-
-
-<c:forEach items="${crt }" var="cl">
-Product ID: <c:out value="${cl.productid}"/><br/>
-Product Name: <c:out value="${cl.prodname}"/><br/>
-Product Price: <c:out value="${cl.prodprice}"/><br/>
-Quantity: <c:out value="${cl.quantity}"/><br/>
-Total:    <c:out value="${cl.carttotal}"/><br/>
-    
-    
-    <c:set var="grandTotal" value="${grandTotal + cl.carttotal }"></c:set>
-    
-    
-    </c:forEach>
-    <h4><strong>Grand Total:</strong></h4>
-
-<h4><strong>INR ${grandTotal}</strong></h4>
+<jsp:include page="header.jsp"></jsp:include>
+<div class="container">
+    <div class="row">
+        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            
+            <div class="row">
+                <div class="text-center">
+                    <h1>Receipt</h1>
+                    <h3>${cl.cartuser}</h3>
+                </div>
+                
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <c:forEach items="${crt }" var="cl">
+                            <td class="col-md-9"><em><c:out value="${cl.prodname}"/></em></h4></td>
+                            <td class="col-md-1" style="text-align: center"> <c:out value="${cl.quantity}"/></td>
+                            <td class="col-md-1 text-center"><c:out value="${cl.prodprice}"/></td>
+                            <td class="col-md-1 text-center"><c:out value="${cl.carttotal}"/></td>
+                            </tr>
+                        <c:set var="grandTotal" value="${grandTotal + cl.carttotal }"></c:set>
+                        </c:forEach>
+        <tr><td class="text-right"><h4><strong>Amount Payable:</strong></h4> </td> <td><h4><strong>INR ${grandTotal}</strong></h4></td>
+                            </tr>
+                   </tbody>
+                </table>
+             </div>
+        </div>
+    </div>
+    </div>
+    <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
