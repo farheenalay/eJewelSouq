@@ -93,7 +93,7 @@ public class CartDao {
 		return rc;
 				
 	}
-		
+	
 	public Cart checkout(int crd)
 	{
 		Session session=sessionFactory.openSession();
@@ -107,5 +107,4 @@ public class CartDao {
 		return rc;
 				
 	}
-			  
 }

@@ -51,8 +51,6 @@ public class CartController {
 		
 	}
 	
-
-	
 	@RequestMapping(value="/removecart",method=RequestMethod.GET)
 	public String RemoveCart(@RequestParam("crd")int crdd,HttpSession session,Map <String,Object> model)
 	{
@@ -64,7 +62,6 @@ public class CartController {
 		return "ShowCart";
 		
 	}
-	
 	
 	@RequestMapping(value="/showCart",method=RequestMethod.GET)
 	public String showCart(HttpSession session,Map <String,Object> model)
@@ -78,13 +75,13 @@ public class CartController {
 	}
 	
 	@RequestMapping(value="/checkout",method=RequestMethod.GET)
-	public String chckout(@RequestParam("crd") int crdd,HttpSession session, Map <String,Object> model)
+	public String checkout(@RequestParam("crd")int crd,HttpSession session,Map <String,Object> model)
 	{
-		crtDao.checkout(crdd);
+		crtDao.checkout(crd);
 		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
 		model.put("crt", clist);
 		
 		return "CheckOut";
 	}
-
+	
 }

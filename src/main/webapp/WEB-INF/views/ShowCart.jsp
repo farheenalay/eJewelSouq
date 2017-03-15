@@ -33,8 +33,9 @@
     <td><c:out value="${cl.quantity}"/></td>
     <td><c:out value="${cl.carttotal}"/></td>
     <td><a href="removecart?crd=${cl.cartid}"> Remove from Cart </a></td>
-
+</c:forEach>
 </table>
+<c:forEach items="${crt }" var="cl">
 <br/><br/><br/>
 <p align="left"><a href="ViewProd"> Continue Shopping </a>
 <p align="right"><a href="checkout?crd=${cl.cartid}"> Check Out </a></p></p>

@@ -9,17 +9,23 @@
 <title>CheckOut</title>
 </head>
 <body>
-<c:forEach items="${crt }" var="cl">
+Cart User: ${cl.cartuser}<br/>
 
-Cart ID :<c:out value="${cl.cartid}"/><br/>
-Cart User: <c:out value="${cl.cartuser}"/><br/>
+
+<c:forEach items="${crt }" var="cl">
 Product ID: <c:out value="${cl.productid}"/><br/>
 Product Name: <c:out value="${cl.prodname}"/><br/>
 Product Price: <c:out value="${cl.prodprice}"/><br/>
 Quantity: <c:out value="${cl.quantity}"/><br/>
 Total:    <c:out value="${cl.carttotal}"/><br/>
-    </c:forEach>
     
-    <h2>Grand Total =</h2>
+    
+    <c:set var="grandTotal" value="${grandTotal + cl.carttotal }"></c:set>
+    
+    
+    </c:forEach>
+    <h4><strong>Grand Total:</strong></h4>
+
+<h4><strong>INR ${grandTotal}</strong></h4>
 </body>
 </html>
