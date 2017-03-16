@@ -8,13 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 
 
-
-
-
 @Entity
 public class UserDetails implements Serializable{
-
-	
 	
 	@Id
 	private String userName;

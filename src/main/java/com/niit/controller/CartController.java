@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,10 +16,12 @@ import com.niit.dao.CartDao;
 import com.niit.dao.ProdDao;
 import com.niit.model.Cart;
 import com.niit.model.Prod;
+import com.niit.model.UserDetails;
 
 @Controller
 public class CartController {
 	int crtcnt=0;
+	double tot=0;
 	@Autowired
 	CartDao crtDao;
 	
@@ -41,12 +44,13 @@ public class CartController {
 		c.setProdprice(p.getPrice());
 		c.setQuantity(qty);
 		c.setCarttotal(p.getPrice()*qty );
-		
+		tot=tot+p.getPrice()*qty;
+		session.setAttribute("crtTot",tot);
 		crtDao.saveCart(c);
 		
 		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
 		model.put("crt", clist);
-		
+				
 		return "ShowCart";
 		
 	}
@@ -58,7 +62,7 @@ public class CartController {
 		
 		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
 		model.put("crt", clist);
-		
+				
 		return "ShowCart";
 		
 	}
@@ -69,19 +73,30 @@ public class CartController {
 
 		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
 		model.put("crt", clist);
-		
+				
 		return "ShowCart";
 		
 	}
 	
-	@RequestMapping(value="/checkout",method=RequestMethod.GET)
-	public String checkout(@RequestParam("crd")int crd,HttpSession session,Map <String,Object> model)
-	{
-		crtDao.checkout(crd);
-		List clist=crtDao.listCart((String)session.getAttribute("UserName"));
-		model.put("crt", clist);
+	
+	@RequestMapping(value = "/OrderConfirm", method = RequestMethod.GET)
+	public String orderConfirm( HttpSession session,Model m) {
+
 		
-		return "CheckOut";
+		String usernam=(String)session.getAttribute("userId");
+		List<UserDetails> userData=crtDao.getUser(usernam);
+		if(userData!=null)
+		{
+		
+			UserDetails ud=userData.get(0);
+			System.out.println("pro idddddddddddddddddddddd" + ud.getUserName());
+		m.addAttribute("UserInfo",userData);
+		
+		
+		}
+            return "OrderConfirm";
 	}
 	
-}
+	
+	
+}//class

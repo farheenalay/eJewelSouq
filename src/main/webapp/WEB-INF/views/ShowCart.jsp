@@ -35,11 +35,16 @@
     <td><a href="removecart?crd=${cl.cartid}"> Remove from Cart </a></td>
 </c:forEach>
 </table>
-<c:forEach items="${crt }" var="cl">
 <br/><br/><br/>
-<p align="left"><a href="ViewProd"> Continue Shopping </a>
-<p align="right"><a href="checkout?crd=${cl.cartid}"> Check Out </a></p></p>
-</c:forEach>
+
+
+<p align="left"/><a href="ViewProd"> Continue Shopping </a>
+
+<p align="right"/><c:forEach items="${crt }" var="cl">
+<a href="OrderConfirm"></c:forEach>
+ Check Out </a>
+
+
 <br/><br/><br/>
 
 <jsp:include page="footer.jsp"></jsp:include>

@@ -6,10 +6,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.model.Cart;
 import com.niit.model.Prod;
+import com.niit.model.UserDetails;
+import org.hibernate.Transaction;
 
+import org.hibernate.Query;
 @Repository
 public class CartDao {
 	
@@ -90,21 +94,33 @@ public class CartDao {
 		session.delete(rc);
 		session.getTransaction().commit();
 		session.close();
-		return rc;
-				
+		return rc;	
 	}
 	
-	public Cart checkout(int crd)
-	{
-		Session session=sessionFactory.openSession();
-		System.out.println("insert method called");
-		session.beginTransaction();
+	@Transactional
+	public List<UserDetails> getUser(String id) {
+		//creating session object    
+				Session session=sessionFactory.openSession();    
+				    
+				//creating transaction object    
+				Transaction t=session.beginTransaction();    
+		String hql = "from"+" UserDetails "+" where userName=" +"'"+id+"'";
+		@SuppressWarnings("rawtypes")
+		Query query = session.createQuery(hql);
 		
-		Cart rc = (Cart)session.get(Cart.class,crd);
+		@SuppressWarnings("unchecked")
+		List<UserDetails> listCategory = (List<UserDetails>) query.list();
 		
-		session.getTransaction().commit();
-		session.close();
-		return rc;
-				
+		if (listCategory != null && !listCategory.isEmpty()) {
+			
+			
+			return listCategory;
+		}
+		t.commit();    
+		session.close();  
+		
+		return null;
 	}
+
+	
 }

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>CheckOut</title>
+<title>Order Confirmation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -25,9 +25,8 @@ body {
             
             <div class="row">
                 <div class="text-center">
-                    <h1>Receipt</h1>
-                    <h3>${cl.cartuser}</h3>
-                </div>
+                    <h1>Confirmation</h1>
+                    </div>
                 
                 <table class="table table-hover">
                     <thead>
@@ -49,13 +48,14 @@ body {
                         <c:set var="grandTotal" value="${grandTotal + cl.carttotal }"></c:set>
                         </c:forEach>
         <tr><td class="text-right"><h4><strong>Amount Payable:</strong></h4> </td> <td><h4><strong>INR ${grandTotal}</strong></h4></td>
-                            </tr>
-                   </tbody>
-                </table>
-             </div>
+                            </tr></tbody>
+        </table>
+        </div>
         </div>
     </div>
     </div>
+    <center><a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-ok"></span> Confirm My Order </a></center>
+    <br/><br/><br/><br/><br/><br/>
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

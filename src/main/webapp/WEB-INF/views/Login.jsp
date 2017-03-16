@@ -46,16 +46,4 @@ body {background-image: url("resources/bki.jpg");}
 </form:form>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-    
+</html> 
