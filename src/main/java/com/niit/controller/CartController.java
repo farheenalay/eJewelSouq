@@ -89,7 +89,7 @@ public class CartController {
 		{
 		
 			UserDetails ud=userData.get(0);
-			System.out.println("pro idddddddddddddddddddddd" + ud.getUserName());
+			System.out.println("pro idddd" + ud.getUserName());
 		m.addAttribute("UserInfo",userData);
 		
 		
@@ -97,6 +97,15 @@ public class CartController {
             return "OrderConfirm";
 	}
 	
-	
+	@RequestMapping(value = "/ThankYou", method = RequestMethod.GET)
+	public String removeCart(@RequestParam("cuser")String cu, HttpSession session,Model m) {
+
+		System.out.println("hello11");
+		cu=(String)session.getAttribute("cartuser");
+		
+		 crtDao.delCart(cu);
+		 
+            return "ThankYou";
+	}
 	
 }//class

@@ -163,6 +163,7 @@ th {
     <th><center>Product Price</center></th>
     <th><center>Manufacturing Date</center></th>
     <th><center>Product Description</center></th>
+    <th><center>Image</center></th>
     </tr>
   </thead>
   <c:forEach items="${pro}" var="prol">

@@ -10,6 +10,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/css">
 body {background-image: url("resources/hola.jpg"); width:100% ; height: 100% ;}
+p { font-color:White ;}
 </style>
 </head>
 <body>
@@ -68,19 +69,20 @@ body {background-image: url("resources/hola.jpg"); width:100% ; height: 100% ;}
         </div>
         <div class="col-md-4">
             <form>
-            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <p><legend><span class="glyphicon glyphicon-globe"></span> Our office</legend></p>
             <address>
-                <strong><b>e-JewelSouq Pvt Ltd.</b></strong><br>
+                <p><strong><b>e-JewelSouq Pvt Ltd.</b></strong><br>
                  BasheerBagh<br>
                  Hyderabad 500029<br>
                 <abbr title="Phone">
                     P:</abbr>
-                +91 7416726290
+                +91 7416726290</p>
             </address>
             <address>
                 <strong>Mail Us@</strong><br>
                 <a href="mailto:#">anam_alay@ymail.com</a>
             </address>
+            
             </form>
         </div>
     </div>

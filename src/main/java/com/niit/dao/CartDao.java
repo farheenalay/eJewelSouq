@@ -12,8 +12,8 @@ import com.niit.model.Cart;
 import com.niit.model.Prod;
 import com.niit.model.UserDetails;
 import org.hibernate.Transaction;
-
 import org.hibernate.Query;
+
 @Repository
 public class CartDao {
 	
@@ -122,5 +122,20 @@ public class CartDao {
 		return null;
 	}
 
-	
+	@Transactional
+	public Cart delCart(String cuser) {
+		  
+		Session session=sessionFactory.openSession();    
+		session.beginTransaction();
+		String hql = "from"+" Cart "+" where cartuser=" +"'"+cuser+"'";
+		
+		session.delete(hql);
+		session.getTransaction().commit();
+		session.close();
+		
+		return null;
+	}
+		
+			
+			
 }

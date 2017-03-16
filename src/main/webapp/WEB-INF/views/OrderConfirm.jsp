@@ -16,7 +16,7 @@
             
             <div class="row">
                 <div class="text-center">
-                    <h1>Order Confirmation</h1>
+                    <h1><strong>Order Confirmation</strong></h1>
                     </div>
 <div>
 <table class="table table-hover">
@@ -42,9 +42,18 @@
 </c:forEach>			
 </table>
 </div></div></div></div></div>
-<br/>
+<br/><br/>
+<div class="container" align="center">
+  <h4>Choose a Payment Mode:</h4>
+<div class="radio disabled">
+      <label><input type="radio" name="optradio" disabled> Debit/Credit Card</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">Cash On Delivery[COD]</label>
+    </div>
+    </div> <br/>
 <center><a href="ViewProd" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove"></span> Cancel Order </a>
-<a href="Payment" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-ok"></span> Payment </a></center>
+<a href="ThankYou" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-ok"></span> Payment </a></center>
 <br/><br/><br/><br/><br/>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
