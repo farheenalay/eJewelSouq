@@ -97,13 +97,31 @@ public class CartDao {
 		return rc;	
 	}
 	
+	public void removeCartUser(String crd)
+	{
+		
+		String hql = "DELETE FROM Cart "  + 
+	             "WHERE cartuser = :u_id";
+	
+		Session session=sessionFactory.openSession();
+		System.out.println("clear cart method called"+crd);
+		session.beginTransaction();
+		Query query = session.createQuery(hql);
+		query.setParameter("u_id",crd);
+		int result = query.executeUpdate();
+		System.out.println("Rows affected: " + result);
+		
+		
+		session.getTransaction().commit();
+		session.close();
+		
+	}
+	
 	@Transactional
 	public List<UserDetails> getUser(String id) {
-		//creating session object    
-				Session session=sessionFactory.openSession();    
-				    
-				//creating transaction object    
-				Transaction t=session.beginTransaction();    
+		   
+	    Session session=sessionFactory.openSession();    
+	    Transaction t=session.beginTransaction();    
 		String hql = "from"+" UserDetails "+" where userName=" +"'"+id+"'";
 		@SuppressWarnings("rawtypes")
 		Query query = session.createQuery(hql);
@@ -122,20 +140,4 @@ public class CartDao {
 		return null;
 	}
 
-	@Transactional
-	public Cart delCart(String cuser) {
-		  
-		Session session=sessionFactory.openSession();    
-		session.beginTransaction();
-		String hql = "from"+" Cart "+" where cartuser=" +"'"+cuser+"'";
-		
-		session.delete(hql);
-		session.getTransaction().commit();
-		session.close();
-		
-		return null;
-	}
-		
-			
-			
 }

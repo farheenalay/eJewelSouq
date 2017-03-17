@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css"> 
-body {background-image: url("resources/sto.jpg"); width:100%;} 
+body {background-image: url("resources/yyy.jpg"); width:100%;} 
  </style>
  <style>
 table {

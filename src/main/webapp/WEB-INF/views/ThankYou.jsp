@@ -9,10 +9,10 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-Thank You!
-Your order will be shipped within 2 Business Days...
-Happy Shopping
-
+<center><h3>Thank You! <br/><br/><br/>
+Your order will be shipped within 2 Business Days...<br/><br/><br/>
+Happy Shopping <br/></h3></center>
+<br/><br/><br/><br/>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

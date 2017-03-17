@@ -97,15 +97,25 @@ public class CartController {
             return "OrderConfirm";
 	}
 	
+	
+	
+	@RequestMapping(value = "/Payment", method = RequestMethod.GET)
+	public String gotoPayment( ) {
+
+		   return "Payment";
+	}
+	
+	
+	
 	@RequestMapping(value = "/ThankYou", method = RequestMethod.GET)
-	public String removeCart(@RequestParam("cuser")String cu, HttpSession session,Model m) {
+	public String removeCart( HttpSession session,Model m) {
 
 		System.out.println("hello11");
-		cu=(String)session.getAttribute("cartuser");
+		String cu=(String)session.getAttribute("userId");
 		
-		 crtDao.delCart(cu);
+		 crtDao.removeCartUser(cu);
 		 
             return "ThankYou";
 	}
 	
-}//class
+}
